@@ -1,0 +1,21 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #000000;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+main {
+  min-height: calc(100vh - 200px);
+}
