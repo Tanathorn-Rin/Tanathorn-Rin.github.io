@@ -2,10 +2,10 @@
 :root {
     --primary-color: #ff0000;
     --secondary-color: #cc0000;
-    --dark-bg: #0a0e27;
-    --light-bg: #1a1f3a;
-    --text-light: #e0e0e0;
-    --text-dark: #f0f0f0;
+    --dark-bg: #000000;
+    --light-bg: #000000;
+    --text-light: #ffffff;
+    --text-dark: #ffffff;
     --white: #ffffff;
     --border-color: #ff0000;
     --shadow: 0 0 20px rgba(255, 0, 0, 0.2);
@@ -38,7 +38,7 @@ body {
 
 /* Navigation */
 .navbar {
-    background: #0a0e27;
+    background: #000000;
     box-shadow: var(--glow);
     position: sticky;
     top: 0;
@@ -149,7 +149,7 @@ body {
 /* About Section */
 .about {
     padding: 80px 20px;
-    background: #0a0e27;
+    background: #000000;
     border-top: 2px solid var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
 }
@@ -191,7 +191,7 @@ body {
 }
 
 .project-card {
-    background: #1a1f3a;
+    background: #000000;
     border: 2px solid var(--primary-color);
     border-radius: 0;
     overflow: hidden;
@@ -267,7 +267,7 @@ body {
 
 /* Skills Section */
 .skills {
-    background: #0a0e27;
+    background: #000000;
     padding: 80px 20px;
     border-top: 2px solid var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
@@ -289,7 +289,7 @@ body {
 }
 
 .skill-category {
-    background: #1a1f3a;
+    background: #000000;
     padding: 2rem;
     border-radius: 0;
     box-shadow: var(--shadow);

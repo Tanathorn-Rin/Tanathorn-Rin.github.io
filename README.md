@@ -1,31 +1,32 @@
-# Portfolio Website
+# Penetration Testing Portfolio
 
-A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Deploy to GitHub Pages for free!
+A professional penetration testing portfolio website with a cybersecurity theme. Red, black, and white color scheme with modern offensive security branding.
 
 ## Features
 
 - 📱 Fully responsive design (mobile, tablet, desktop)
-- 🎨 Modern and clean UI with smooth animations
+- 🔴 Cybersecurity red/black/white theme
+- 🎯 Penetration testing portfolio template
 - ⚡ Fast loading with no external dependencies
 - 🔍 SEO friendly structure
-- 💫 Smooth scroll navigation
-- 🎯 Easy to customize
+- 💫 Smooth scroll navigation and effects
+- 🎨 Professional security-focused design
 
 ## Sections
 
-- **Hero**: Eye-catching introduction
-- **About**: Brief bio section
-- **Projects**: Showcase your work
-- **Skills**: Display your expertise
-- **Contact**: Links to reach you
-- **Footer**: Copyright info
+- **Hero**: Eye-catching offensive security introduction
+- **Security Profile**: Bio and professional summary
+- **Security Engagements**: Showcase your penetration tests and assessments
+- **Technical Expertise**: Display your security tools and techniques
+- **Engagement Inquiry**: Contact section for consultations
+- **Footer**: Legal disclaimer for authorized testing
 
 ## Customization
 
-1. **Edit your info**: Replace "Your Name", email, and social links in `index.html`
-2. **Update projects**: Add your project details and links
-3. **Modify colors**: Edit CSS variables in `styles.css` (`:root` section)
-4. **Add images**: Replace placeholder images with your own
+1. **Edit your info**: Replace email, links, and social profiles in `index.html`
+2. **Add your engagements**: Update project cards with your penetration tests and assessments
+3. **Update skills**: Modify security tools and techniques in the skills section
+4. **Color scheme**: Primary red (#ff0000), backgrounds black (#000000), text white (#ffffff)
 
 ## Deploying to GitHub Pages
 
@@ -56,12 +57,19 @@ git push -u origin main
 ### Step 3: Access Your Site
 Your portfolio will be live at: `https://yourusername.github.io`
 
+### Step 4: Enable GitHub Pages
+1. Go to repository Settings
+2. Scroll to "Pages" section
+3. Set Source to `Deploy from a branch`
+4. Select `main` branch with `/root` folder
+5. Wait 1-2 minutes for deployment
+
 ## File Structure
 
 ```
 portfolio-website/
-├── index.html       # Main HTML file
-├── styles.css       # Styling
+├── index.html       # Main HTML - Security engagement sections
+├── styles.css       # Cybersecurity red/black/white theme
 ├── script.js        # JavaScript functionality
 └── README.md        # This file
 ```
@@ -73,45 +81,44 @@ portfolio-website/
 - Safari (latest)
 - Edge (latest)
 
-## Tips for Success
+## Color Scheme
+
+| Element | Color | Hex |
+|---------|-------|-----|
+| Primary (Text/Borders) | Red | #ff0000 |
+| Background | Black | #000000 |
+| Text | White | #ffffff |
+
+## Customization Tips
 
 ✨ **Before deploying:**
-1. Update your name and bio
-2. Replace placeholder images
-3. Add your real project links
+1. Update your name/title
+2. Add your penetration testing engagements
+3. List your security tools and expertise
 4. Update contact information
-5. Customize colors to match your brand
+5. Add links to reports or portfolio pieces
 
-## Further Customization
+### Adding More Engagements
+Duplicate the `.project-card` div and update:
+- Engagement title
+- Description of scope and findings
+- Testing methodology tags
+- Link to full report
 
-### Adding a blog section
-Create a new section after skills:
-```html
-<section id="blog" class="blog">
-    <div class="container">
-        <h2>Latest Posts</h2>
-        <!-- Add blog posts here -->
-    </div>
-</section>
-```
+### Updating Security Skills
+Edit the three skill categories to reflect your expertise:
+- Vulnerability Analysis
+- Exploitation Techniques
+- Security Tools
 
-### Adding more projects
-Duplicate the `.project-card` div and update the content.
+## Important Notes
 
-### Changing the color scheme
-Edit the CSS variables in `styles.css`:
-```css
-:root {
-    --primary-color: #your-color;
-    --secondary-color: #your-accent;
-    /* ... other colors ... */
-}
-```
+⚠️ **Legal Disclaimer**: All penetration testing must be authorized. This portfolio is for showcasing legitimate, authorized security assessments only.
 
 ## License
 
-Free to use for personal and commercial projects.
+Free to use for personal and professional security portfolio purposes.
 
 ---
 
-**Happy coding! 🚀**
+**Built for cybersecurity professionals. 🔒**
