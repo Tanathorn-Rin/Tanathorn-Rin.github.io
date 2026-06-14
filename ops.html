@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>current_ops :: tanathorn</title>
+    <meta name="description" content="Current operations — projects Tanathorn is working on right now.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main id="view" class="page">
+        <section id="ops" class="section ops">
+            <div class="container">
+                <p class="page-crumb">visitor@tanathorn:<span class="accent">~/current_ops</span>$ ls -la</p>
+                <h2 class="section-title" data-index="02"><span class="hash">#</span> current_ops <span class="title-sub">// what I'm working on right now</span></h2>
+                <div class="ops-grid">
+                    <!-- ============================================================
+                         EDIT: each <article> is one current project / operation.
+                         status options (class): status-active | status-paused | status-done
+                    ============================================================ -->
+                    <article class="op-card reveal">
+                        <div class="op-head">
+                            <span class="op-tag status-active">● ACTIVE</span>
+                            <span class="op-id">OP-001</span>
+                        </div>
+                        <h3 class="op-title">HTB Season Lab</h3>
+                        <p class="op-desc">Rooting weekly Hack The Box machines, documenting privilege-escalation paths and building a personal methodology cheatsheet.</p>
+                        <div class="op-meta">
+                            <span class="chip">enumeration</span>
+                            <span class="chip">privesc</span>
+                            <span class="chip">linux</span>
+                        </div>
+                        <div class="op-progress">
+                            <div class="op-progress-head"><span>progress</span><span>65%</span></div>
+                            <div class="bar"><span class="fill" style="--w:65%"></span></div>
+                        </div>
+                        <a href="#" class="op-link">&gt; view notes</a>
+                    </article>
+
+                    <article class="op-card reveal">
+                        <div class="op-head">
+                            <span class="op-tag status-active">● ACTIVE</span>
+                            <span class="op-id">OP-002</span>
+                        </div>
+                        <h3 class="op-title">Web App Pentest Lab</h3>
+                        <p class="op-desc">Building a deliberately vulnerable web app + writing my own exploit scripts for OWASP Top 10 (SQLi, XSS, SSRF, IDOR).</p>
+                        <div class="op-meta">
+                            <span class="chip">burp suite</span>
+                            <span class="chip">owasp</span>
+                            <span class="chip">python</span>
+                        </div>
+                        <div class="op-progress">
+                            <div class="op-progress-head"><span>progress</span><span>40%</span></div>
+                            <div class="bar"><span class="fill" style="--w:40%"></span></div>
+                        </div>
+                        <a href="#" class="op-link">&gt; view repo</a>
+                    </article>
+
+                    <article class="op-card reveal">
+                        <div class="op-head">
+                            <span class="op-tag status-paused">❚❚ PAUSED</span>
+                            <span class="op-id">OP-003</span>
+                        </div>
+                        <h3 class="op-title">Home AD Lab</h3>
+                        <p class="op-desc">Active Directory attack lab in VirtualBox — Kerberoasting, AS-REP roasting, lateral movement, and BloodHound mapping.</p>
+                        <div class="op-meta">
+                            <span class="chip">active directory</span>
+                            <span class="chip">bloodhound</span>
+                            <span class="chip">windows</span>
+                        </div>
+                        <div class="op-progress">
+                            <div class="op-progress-head"><span>progress</span><span>25%</span></div>
+                            <div class="bar"><span class="fill" style="--w:25%"></span></div>
+                        </div>
+                        <a href="#" class="op-link">&gt; view notes</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

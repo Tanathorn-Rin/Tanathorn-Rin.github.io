@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning :: tanathorn</title>
+    <meta name="description" content="What Tanathorn is currently learning, with live progress.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main id="view" class="page">
+        <section id="learning" class="section learning">
+            <div class="container">
+                <p class="page-crumb">visitor@tanathorn:<span class="accent">~/learning</span>$ cat progress.log</p>
+                <h2 class="section-title" data-index="03"><span class="hash">#</span> learning <span class="title-sub">// skills I'm leveling up</span></h2>
+                <div class="learning-grid">
+                    <!-- ============================================================
+                         EDIT: each row = a topic you're learning + your progress %.
+                         Change the text and the style="--w:NN%" value.
+                    ============================================================ -->
+                    <div class="learn-card reveal">
+                        <div class="learn-row">
+                            <div class="learn-info">
+                                <span class="learn-name">Privilege Escalation (Linux)</span>
+                                <span class="learn-note">TryHackMe — Linux PrivEsc path</span>
+                            </div>
+                            <span class="learn-pct">75%</span>
+                        </div>
+                        <div class="bar"><span class="fill" style="--w:75%"></span></div>
+                    </div>
+
+                    <div class="learn-card reveal">
+                        <div class="learn-row">
+                            <div class="learn-info">
+                                <span class="learn-name">Web Exploitation</span>
+                                <span class="learn-note">PortSwigger Web Security Academy</span>
+                            </div>
+                            <span class="learn-pct">60%</span>
+                        </div>
+                        <div class="bar"><span class="fill" style="--w:60%"></span></div>
+                    </div>
+
+                    <div class="learn-card reveal">
+                        <div class="learn-row">
+                            <div class="learn-info">
+                                <span class="learn-name">Active Directory Attacks</span>
+                                <span class="learn-note">TCM Security — Practical Ethical Hacking</span>
+                            </div>
+                            <span class="learn-pct">45%</span>
+                        </div>
+                        <div class="bar"><span class="fill" style="--w:45%"></span></div>
+                    </div>
+
+                    <div class="learn-card reveal">
+                        <div class="learn-row">
+                            <div class="learn-info">
+                                <span class="learn-name">Python for Offensive Tooling</span>
+                                <span class="learn-note">Writing my own scanners &amp; exploits</span>
+                            </div>
+                            <span class="learn-pct">55%</span>
+                        </div>
+                        <div class="bar"><span class="fill" style="--w:55%"></span></div>
+                    </div>
+
+                    <div class="learn-card reveal">
+                        <div class="learn-row">
+                            <div class="learn-info">
+                                <span class="learn-name">Binary Exploitation / Reversing</span>
+                                <span class="learn-note">pwn.college — early stages</span>
+                            </div>
+                            <span class="learn-pct">20%</span>
+                        </div>
+                        <div class="bar"><span class="fill" style="--w:20%"></span></div>
+                    </div>
+                </div>
+
+                <!-- Now / Next / Done quick board -->
+                <div class="board reveal">
+                    <div class="board-col">
+                        <h4 class="board-title"><span class="accent">▸</span> now</h4>
+                        <ul class="board-list">
+                            <!-- EDIT -->
+                            <li>OSCP prep — buffer overflow refresh</li>
+                            <li>HTB weekly box</li>
+                        </ul>
+                    </div>
+                    <div class="board-col">
+                        <h4 class="board-title"><span class="accent">▸</span> next</h4>
+                        <ul class="board-list">
+                            <li>BloodHound deep dive</li>
+                            <li>Start eJPT exam</li>
+                        </ul>
+                    </div>
+                    <div class="board-col">
+                        <h4 class="board-title"><span class="accent">▸</span> done</h4>
+                        <ul class="board-list done">
+                            <li>TryHackMe Pre-Security path</li>
+                            <li>First SQLi writeup published</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

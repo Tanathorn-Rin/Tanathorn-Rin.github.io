@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact :: tanathorn</title>
+    <meta name="description" content="Get in touch with Tanathorn — open to CTF teams, study buddies and junior pentest roles.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main id="view" class="page">
+        <section id="contact" class="section contact">
+            <div class="container">
+                <p class="page-crumb">visitor@tanathorn:<span class="accent">~/contact</span>$ ./contact.sh --init</p>
+                <h2 class="section-title" data-index="06"><span class="hash">#</span> contact</h2>
+                <div class="contact-wrap reveal">
+                    <div class="term-card">
+                        <div class="term-bar small">
+                            <span class="dot red"></span><span class="dot"></span><span class="dot"></span>
+                            <span class="term-title">~/contact.sh</span>
+                        </div>
+                        <div class="term-body">
+                            <p><span class="muted">$</span> ./contact.sh --init</p>
+                            <p class="out">Open to CTF teams, study buddies, and junior pentest roles. Drop a message:</p>
+                            <form class="contact-form" id="contact-form">
+                                <label class="field">
+                                    <span class="field-label">name</span>
+                                    <input type="text" id="name" required placeholder="enter your name">
+                                </label>
+                                <label class="field">
+                                    <span class="field-label">email</span>
+                                    <input type="email" id="email" required placeholder="you@domain.com">
+                                </label>
+                                <label class="field">
+                                    <span class="field-label">message</span>
+                                    <textarea id="message" rows="4" required placeholder="type your message..."></textarea>
+                                </label>
+                                <button type="submit" class="btn btn-primary">&gt; send transmission</button>
+                                <p id="form-message" class="form-message"></p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="contact-side">
+                        <!-- EDIT: your real links/handles -->
+                        <a class="contact-link" href="mailto:so.tanathorn@gmail.com"><span class="cl-key">email</span><span class="cl-val">so.tanathorn@gmail.com</span></a>
+                        <a class="contact-link" href="https://github.com/Tanathorn-Rin" target="_blank" rel="noopener"><span class="cl-key">github</span><span class="cl-val">@Tanathorn-Rin</span></a>
+                        <a class="contact-link" href="#" target="_blank" rel="noopener"><span class="cl-key">linkedin</span><span class="cl-val">/in/your-handle</span></a>
+                        <a class="contact-link" href="#" target="_blank" rel="noopener"><span class="cl-key">htb</span><span class="cl-val">@your-htb</span></a>
+                        <a class="contact-link" href="#" target="_blank" rel="noopener"><span class="cl-key">tryhackme</span><span class="cl-val">@your-thm</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

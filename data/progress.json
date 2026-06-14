@@ -1,0 +1,40 @@
+{
+  "updated": "2026-06-15",
+  "htb_academy": {
+    "cert": "CPTS",
+    "cert_full": "Certified Penetration Testing Specialist",
+    "path_progress": 62,
+    "modules_done": 18,
+    "modules_total": 28,
+    "cubes": 1240,
+    "recent_modules": [
+      "Active Directory Enumeration & Attacks",
+      "Privilege Escalation (Linux)",
+      "Attacking Common Services"
+    ]
+  },
+  "portswigger": {
+    "progress": 58,
+    "solved": 142,
+    "total": 246,
+    "by_topic": [
+      { "name": "SQL injection", "solved": 18, "total": 18 },
+      { "name": "Cross-site scripting", "solved": 24, "total": 30 },
+      { "name": "Access control", "solved": 11, "total": 13 },
+      { "name": "SSRF", "solved": 5, "total": 7 },
+      { "name": "Authentication", "solved": 9, "total": 14 }
+    ]
+  },
+  "htb_labs": {
+    "rank": "Hacker",
+    "machines_owned": 42,
+    "user_owns": 42,
+    "system_owns": 38,
+    "recent": [
+      { "name": "Cap",    "os": "linux",   "difficulty": "easy",   "date": "2026-06-10" },
+      { "name": "Forest", "os": "windows", "difficulty": "medium", "date": "2026-06-05" },
+      { "name": "Devel",  "os": "windows", "difficulty": "easy",   "date": "2026-06-01" },
+      { "name": "Sauna",  "os": "windows", "difficulty": "medium", "date": "2026-05-26" }
+    ]
+  }
+}
