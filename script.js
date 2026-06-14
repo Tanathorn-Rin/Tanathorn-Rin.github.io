@@ -182,13 +182,13 @@
     ];
     var WHOAMI = [
         'tanathorn <span class="muted">::</span> offensive security / penetration tester',
-        '<span class="muted">aspiring OSCP — I break web apps, AD, and boxes for sport.</span>'
+        '<span class="muted">working toward HTB CPTS — I break web apps, AD, and boxes for sport.</span>'
     ];
     var ABOUT = [
         '<span class="muted">$ cat about.txt</span>',
         'Security enthusiast transitioning into offensive security.',
-        'I live on Hack The Box &amp; TryHackMe, dismantle web apps,',
-        'and document every exploit. Goal: pro pentester + OSCP.',
+        'I live on Hack The Box &amp; HTB Academy, dismantle web apps,',
+        'and document every exploit. Goal: HTB CPTS &rarr; OSCP.',
         '<span class="muted">&rarr; run</span> goto about'
     ];
     var OPS = [
@@ -199,12 +199,13 @@
         '<span class="muted">&rarr; run</span> goto ops <span class="muted">for the full page</span>'
     ];
     var LEARNING = [
-        '<span class="accent">LEARNING</span> <span class="muted">// leveling up</span>',
-        'Privilege Escalation (Linux) ...... 75%',
-        'Web Exploitation .................. 60%',
-        'Active Directory Attacks .......... 45%',
-        'Python Offensive Tooling .......... 55%',
-        'Binary Exploitation / Reversing ... 20%',
+        '<span class="accent">LEARNING</span> <span class="muted">// HTB Academy · CPTS path</span>',
+        'Active Directory Enum &amp; Attacks ... 65%',
+        'Attacking Common Services ......... 100%',
+        'Privilege Escalation (Lin/Win) .... 80%',
+        'Web Attacks &amp; SQL Injection ....... 70%',
+        'Pivoting &amp; Tunneling .............. 35%',
+        'Documentation &amp; Reporting ......... 15%',
         '<span class="muted">&rarr; run</span> goto learning'
     ];
     var SKILLS = [
