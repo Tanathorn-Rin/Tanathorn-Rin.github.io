@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog :: tanathorn</title>
+    <meta name="description" content="Blog — write-ups and study notes by Tanathorn: HTB boxes, CTF solves, and how-it-works security notes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main id="view" class="page">
+        <section id="blog" class="section blog">
+            <div class="container">
+                <p class="page-crumb">visitor@tanathorn:<span class="accent">~/blog</span>$ ls -lt</p>
+                <h2 class="section-title" data-index="08"><span class="hash">#</span> <span data-i18n="nav.blog">blog</span> <span class="title-sub">// write-ups &amp; notes</span></h2>
+                <p class="wu-intro">Box roots, CTF solves, and how-it-works notes — newest first. Public, fully-authorized targets only.</p>
+                <div class="wu-filter">
+                    <button class="wu-fbtn active" data-filter="all">all</button>
+                    <button class="wu-fbtn" data-filter="htb">HTB</button>
+                    <button class="wu-fbtn" data-filter="ctf">CTF</button>
+                    <button class="wu-fbtn" data-filter="notes">notes</button>
+                </div>
+                <div class="wu-grid">
+                    <!-- ============================================================
+                         BLOG POST TEMPLATE — no posts yet.
+
+                         To publish a post:
+                           1. Copy  posts/_template.html  to  posts/your-id.html
+                              and write your content inside the three lang-block
+                              divs (English required; ja / zh optional and fall
+                              back to English).
+                           2. Copy the &lt;article&gt; below, remove the comment
+                              wrapper, and edit it. Set data-type + badge to one of
+                              htb | ctf | notes, and point the link at your page.
+                    ============================================================ -->
+                    <!--
+                    <article class="wu-card reveal" data-type="notes">
+                        <div class="wu-head">
+                            <span class="wu-type type-notes">NOTES</span>
+                            <span class="wu-date">2026-01-01</span>
+                        </div>
+                        <h3 class="wu-title">Post title</h3>
+                        <p class="wu-sub">tag · tag</p>
+                        <p class="wu-desc">One-line summary of what the post covers.</p>
+                        <div class="wu-meta"><span class="chip">tag</span><span class="chip">tag</span></div>
+                        <a class="wu-link" href="posts/your-id.html">&gt; read post</a>
+                    </article>
+                    -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -15,39 +15,45 @@
         <section id="arsenal" class="section arsenal">
             <div class="container">
                 <p class="page-crumb">visitor@tanathorn:<span class="accent">~/arsenal</span>$ ls tools/</p>
-                <h2 class="section-title" data-index="04"><span class="hash">#</span> arsenal <span class="title-sub">// tools &amp; tech</span></h2>
+                <h2 class="section-title" data-index="04"><span class="hash">#</span> <span data-i18n="nav.arsenal">arsenal</span> <span class="title-sub" data-i18n-html="arsenal.sub">// tools &amp; tech</span></h2>
+                <p class="arsenal-legend">
+                    <span class="tag lvl-1">basic</span>
+                    <span class="tag lvl-2">intermediate</span>
+                    <span class="tag lvl-3">proficient</span>
+                    <span class="tag lvl-4">advanced</span>
+                    <span class="legend-sep">·</span>
+                    <span class="tag learning">learning</span>
+                </p>
                 <div class="arsenal-grid">
-                    <!-- EDIT each group's title + tags -->
+                    <!-- EDIT: per tool set "tag lvl-1..4" (1 basic → 4 advanced). Add "learning" for one you're studying now. -->
                     <div class="arsenal-card reveal">
-                        <h3 class="arsenal-cat">recon &amp; scanning</h3>
+                        <h3 class="arsenal-cat" data-i18n-html="ars.recon">recon &amp; scanning</h3>
                         <div class="tags">
-                            <span class="tag">nmap</span><span class="tag">masscan</span>
-                            <span class="tag">gobuster</span><span class="tag">ffuf</span>
-                            <span class="tag">amass</span><span class="tag">nuclei</span>
+                            <span class="tag lvl-2">nmap</span><span class="tag lvl-3">gobuster</span>
+                            <span class="tag lvl-2">ffuf</span><span class="tag lvl-1">amass</span>
                         </div>
                     </div>
                     <div class="arsenal-card reveal">
-                        <h3 class="arsenal-cat">exploitation</h3>
+                        <h3 class="arsenal-cat" data-i18n="ars.exploit">exploitation</h3>
                         <div class="tags">
-                            <span class="tag">metasploit</span><span class="tag">burp suite</span>
-                            <span class="tag">sqlmap</span><span class="tag">hydra</span>
-                            <span class="tag">john</span><span class="tag">hashcat</span>
+                            <span class="tag lvl-3">burp suite</span><span class="tag lvl-1">metasploit</span>
+                            <span class="tag lvl-1">sqlmap</span><span class="tag lvl-2">hydra</span>
+                            <span class="tag lvl-2">john</span><span class="tag lvl-2 learning">hashcat</span>
                         </div>
                     </div>
                     <div class="arsenal-card reveal">
-                        <h3 class="arsenal-cat">post-exploitation</h3>
+                        <h3 class="arsenal-cat" data-i18n="ars.post">post-exploitation</h3>
                         <div class="tags">
-                            <span class="tag">mimikatz</span><span class="tag">bloodhound</span>
-                            <span class="tag">impacket</span><span class="tag">linpeas</span>
-                            <span class="tag">winpeas</span>
+                            <span class="tag lvl-2">linpeas</span><span class="tag lvl-2">winpeas</span>
+                            <span class="tag learning">bloodhound</span><span class="tag lvl-2 learning">mimikatz</span>
                         </div>
                     </div>
                     <div class="arsenal-card reveal">
-                        <h3 class="arsenal-cat">languages &amp; os</h3>
+                        <h3 class="arsenal-cat" data-i18n-html="ars.lang">languages &amp; os</h3>
                         <div class="tags">
-                            <span class="tag">python</span><span class="tag">bash</span>
-                            <span class="tag">powershell</span><span class="tag">kali linux</span>
-                            <span class="tag">c</span>
+                            <span class="tag lvl-3">kali linux</span><span class="tag lvl-3">python</span>
+                            <span class="tag lvl-2">bash</span><span class="tag lvl-1">powershell</span>
+                            <span class="tag lvl-3">c</span>
                         </div>
                     </div>
                 </div>

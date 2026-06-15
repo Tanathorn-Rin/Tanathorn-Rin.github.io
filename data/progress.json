@@ -1,40 +1,66 @@
 {
   "updated": "2026-06-15",
+  "paths_done": 2,
+  "learning_paths": [
+    { "name": "HTB CJCA", "progress": 76 },
+    { "name": "HTB CWES", "progress": 100 },
+    { "name": "HTB CPTS", "progress": 100 }
+  ],
   "htb_academy": {
-    "cert": "CPTS",
-    "cert_full": "Certified Penetration Testing Specialist",
-    "path_progress": 62,
-    "modules_done": 18,
-    "modules_total": 28,
-    "cubes": 1240,
+    "cert": "CJCA",
+    "cert_full": "Certified Junior Cybersecurity Associate",
+    "path_progress": 76,
+    "modules_done": 13,
+    "modules_total": 20,
     "recent_modules": [
-      "Active Directory Enumeration & Attacks",
-      "Privilege Escalation (Linux)",
-      "Attacking Common Services"
+      "Pentest in a Nutshell"
     ]
   },
   "portswigger": {
-    "progress": 58,
-    "solved": 142,
-    "total": 246,
     "by_topic": [
-      { "name": "SQL injection", "solved": 18, "total": 18 },
-      { "name": "Cross-site scripting", "solved": 24, "total": 30 },
-      { "name": "Access control", "solved": 11, "total": 13 },
-      { "name": "SSRF", "solved": 5, "total": 7 },
-      { "name": "Authentication", "solved": 9, "total": 14 }
+      { "name": "SQL injection", "solved": 0, "total": 18 },
+      { "name": "Cross-site scripting", "solved": 0, "total": 30 },
+      { "name": "Cross-site request forgery (CSRF)", "solved": 0, "total": 12 },
+      { "name": "Clickjacking", "solved": 0, "total": 5 },
+      { "name": "DOM-based vulnerabilities", "solved": 0, "total": 9 },
+      { "name": "Cross-origin resource sharing (CORS)", "solved": 0, "total": 4 },
+      { "name": "XML external entity (XXE) injection", "solved": 0, "total": 9 },
+      { "name": "Server-side request forgery (SSRF)", "solved": 0, "total": 7 },
+      { "name": "HTTP request smuggling", "solved": 0, "total": 21 },
+      { "name": "OS command injection", "solved": 0, "total": 5 },
+      { "name": "Server-side template injection", "solved": 0, "total": 7 },
+      { "name": "Path traversal", "solved": 0, "total": 6 },
+      { "name": "Access control", "solved": 0, "total": 13 },
+      { "name": "Authentication", "solved": 0, "total": 14 },
+      { "name": "WebSockets", "solved": 0, "total": 3 },
+      { "name": "Web cache poisoning", "solved": 0, "total": 10 },
+      { "name": "Insecure deserialization", "solved": 0, "total": 8 },
+      { "name": "Information disclosure", "solved": 0, "total": 5 },
+      { "name": "Business logic vulnerabilities", "solved": 0, "total": 11 },
+      { "name": "HTTP Host header attacks", "solved": 0, "total": 7 },
+      { "name": "OAuth authentication", "solved": 0, "total": 6 },
+      { "name": "File upload vulnerabilities", "solved": 0, "total": 7 },
+      { "name": "JWT attacks", "solved": 0, "total": 8 },
+      { "name": "Prototype pollution", "solved": 0, "total": 9 },
+      { "name": "Essential skills", "solved": 0, "total": 3 },
+      { "name": "GraphQL API vulnerabilities", "solved": 0, "total": 5 },
+      { "name": "NoSQL injection", "solved": 0, "total": 4 },
+      { "name": "API testing", "solved": 0, "total": 5 },
+      { "name": "Web LLM attacks", "solved": 0, "total": 4 },
+      { "name": "Web cache deception", "solved": 0, "total": 5 },
+      { "name": "Race conditions", "solved": 0, "total": 6 }
     ]
   },
   "htb_labs": {
     "rank": "Hacker",
-    "machines_owned": 42,
-    "user_owns": 42,
-    "system_owns": 38,
+    "machines_owned": 7,
+    "user_owns": 7,
+    "system_owns": 7,
+
+    "recent_template": {"name": "", "os": "", "difficulty": "","date": ""},
+
     "recent": [
-      { "name": "Cap",    "os": "linux",   "difficulty": "easy",   "date": "2026-06-10" },
-      { "name": "Forest", "os": "windows", "difficulty": "medium", "date": "2026-06-05" },
-      { "name": "Devel",  "os": "windows", "difficulty": "easy",   "date": "2026-06-01" },
-      { "name": "Sauna",  "os": "windows", "difficulty": "medium", "date": "2026-05-26" }
+      { "name": "Cap",    "os": "linux",   "difficulty": "easy",   "date": "2025-03-10" }
     ]
   }
 }

@@ -15,7 +15,7 @@
         <section id="about" class="section about">
             <div class="container">
                 <p class="page-crumb">visitor@tanathorn:<span class="accent">~/whoami</span>$ cat about.txt</p>
-                <h2 class="section-title" data-index="01"><span class="hash">#</span> whoami</h2>
+                <h2 class="section-title" data-index="01"><span class="hash">#</span> <span data-i18n="nav.whoami">whoami</span></h2>
                 <div class="about-grid">
                     <div class="term-card reveal">
                         <div class="term-bar small">
@@ -25,37 +25,38 @@
                         <div class="term-body">
                             <!-- EDIT: your bio -->
                             <p><span class="muted">$</span> cat about.txt</p>
-                            <p class="out">
+                            <p class="out" data-i18n-html="about.bio1">
                                 Hi, I'm <span class="accent">Tanathorn</span> — a security enthusiast
                                 transitioning into offensive security. I spend my time on
                                 Hack The Box &amp; HTB Academy, breaking down web apps, and
                                 documenting everything I learn.
                             </p>
-                            <p class="out">
-                                My current focus is the <span class="accent">HTB CPTS</span> certification, on my
-                                way to becoming a professional penetration tester (OSCP next).
-                                This site is my live lab notebook — what I'm attacking, what
-                                I'm studying, and how far I've come.
+                            <p class="out" data-i18n-html="about.bio2">
+                                My objective is to become a professional penetration tester.<br>
+                                I've completed the <span class="accent">HTB CWES, CPTS</span> learning path and I'm now
+                                working through the <span class="accent">HTB CJCA</span> path (exams + OSCP next).
+                                This website serves as my active lab notebook, documenting my attack strategies, 
+                                ongoing research, and technical growth.
                             </p>
                         </div>
                     </div>
                     <div class="stats reveal">
                         <!-- EDIT: your numbers -->
                         <div class="stat-card">
-                            <span class="stat-num" data-count="42">0</span>
-                            <span class="stat-label">boxes rooted</span>
+                            <span class="stat-num" data-count="5+">0</span>
+                            <span class="stat-label" data-i18n="stat.boxes">boxes rooted</span>
                         </div>
                         <div class="stat-card">
-                            <span class="stat-num" data-count="15">0</span>
-                            <span class="stat-label">CTFs played</span>
+                            <span class="stat-num" data-count="50+">0</span>
+                            <span class="stat-label" data-i18n="stat.ctfs">CTFs played</span>
                         </div>
                         <div class="stat-card">
-                            <span class="stat-num" data-count="7">0</span>
-                            <span class="stat-label">writeups</span>
+                            <span class="stat-num" data-count="0">0</span>
+                            <span class="stat-label" data-i18n="stat.writeups">writeups</span>
                         </div>
                         <div class="stat-card">
                             <span class="stat-num" data-count="3">0</span>
-                            <span class="stat-label">certs in progress</span>
+                            <span class="stat-label" data-i18n="stat.certs">certs in progress</span>
                         </div>
                     </div>
                 </div>

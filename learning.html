@@ -15,101 +15,100 @@
         <section id="learning" class="section learning">
             <div class="container">
                 <p class="page-crumb">visitor@tanathorn:<span class="accent">~/learning</span>$ cat progress.log</p>
-                <h2 class="section-title" data-index="03"><span class="hash">#</span> learning <span class="title-sub">// HTB Academy · CPTS path</span></h2>
-                <div class="learning-grid">
-                    <!-- ============================================================
-                         EDIT: each row = a topic you're learning + your progress %.
-                         Change the text and the style="--w:NN%" value.
-                    ============================================================ -->
-                    <div class="learn-card reveal">
-                        <div class="learn-row">
-                            <div class="learn-info">
-                                <span class="learn-name">Active Directory Enumeration &amp; Attacks</span>
-                                <span class="learn-note">HTB Academy — CPTS path</span>
-                            </div>
-                            <span class="learn-pct">65%</span>
+                <h2 class="section-title" data-index="03"><span class="hash">#</span> <span data-i18n="nav.learning">learning</span> <span class="title-sub">// HTB Academy · CWES + CPTS + CJCA</span></h2>
+                <!-- ============================================================
+                     EDIT: each <div class="learn-track"> is one cert / path.
+                     • Completed cert  -> add class "done": header only (name, sub, 100%).
+                     • In-progress     -> keep .learning-grid of .learn-card modules;
+                       set BOTH the .learn-pct and style="--w:NN%"; overall % auto-calcs.
+                ============================================================ -->
+                <div class="learn-track done">
+                    <div class="track-head">
+                        <div class="track-id">
+                            <span class="track-name">HTB CWES</span>
+                            <span class="track-note">Certified Web Exploitation Specialist · learning path complete (exam pending)</span>
                         </div>
-                        <div class="bar"><span class="fill" style="--w:65%"></span></div>
+                        <span class="track-pct">100%</span>
                     </div>
+                </div>
 
-                    <div class="learn-card reveal">
-                        <div class="learn-row">
-                            <div class="learn-info">
-                                <span class="learn-name">Attacking Common Services</span>
-                                <span class="learn-note">HTB Academy — CPTS path</span>
-                            </div>
-                            <span class="learn-pct">100%</span>
+                <div class="learn-track done">
+                    <div class="track-head">
+                        <div class="track-id">
+                            <span class="track-name">HTB CPTS</span>
+                            <span class="track-note">Certified Penetration Testing Specialist · learning path complete (exam pending)</span>
                         </div>
-                        <div class="bar"><span class="fill" style="--w:100%"></span></div>
+                        <span class="track-pct">100%</span>
                     </div>
+                </div>
 
-                    <div class="learn-card reveal">
-                        <div class="learn-row">
-                            <div class="learn-info">
-                                <span class="learn-name">Privilege Escalation — Linux &amp; Windows</span>
-                                <span class="learn-note">HTB Academy — CPTS path</span>
-                            </div>
-                            <span class="learn-pct">80%</span>
+                <div class="learn-track">
+                    <div class="track-head">
+                        <div class="track-id">
+                            <span class="track-name">HTB CJCA</span>
+                            <span class="track-note">Certified Junior Cybersecurity Associate · also in progress</span>
                         </div>
-                        <div class="bar"><span class="fill" style="--w:80%"></span></div>
+                        <span class="track-pct" data-track-pct>—</span>
                     </div>
-
-                    <div class="learn-card reveal">
-                        <div class="learn-row">
-                            <div class="learn-info">
-                                <span class="learn-name">Web Attacks &amp; SQL Injection</span>
-                                <span class="learn-note">HTB Academy — CPTS path</span>
+                    <div class="learning-grid">
+                        <!-- EDIT: your CJCA modules + progress (plain text — edit directly) -->
+                        <div class="learn-card reveal">
+                            <div class="learn-row">
+                                <div class="learn-info">
+                                    <span class="learn-name">Pentest in a Nutshell</span>
+                                    <span class="learn-note">HTB Academy — CJCA path</span>
+                                </div>
+                                <span class="learn-pct">25%</span>
                             </div>
-                            <span class="learn-pct">70%</span>
+                            <div class="bar"><span class="fill" style="--w:25%"></span></div>
                         </div>
-                        <div class="bar"><span class="fill" style="--w:70%"></span></div>
-                    </div>
 
-                    <div class="learn-card reveal">
-                        <div class="learn-row">
-                            <div class="learn-info">
-                                <span class="learn-name">Pivoting, Tunneling &amp; Port Forwarding</span>
-                                <span class="learn-note">HTB Academy — CPTS path</span>
+                        <div class="learn-card reveal">
+                            <div class="learn-row">
+                                <div class="learn-info">
+                                    <span class="learn-name">Hacking WordPress</span>
+                                    <span class="learn-note">HTB Academy — CJCA path</span>
+                                </div>
+                                <span class="learn-pct">31%</span>
                             </div>
-                            <span class="learn-pct">35%</span>
+                            <div class="bar"><span class="fill" style="--w:31%"></span></div>
                         </div>
-                        <div class="bar"><span class="fill" style="--w:35%"></span></div>
-                    </div>
 
-                    <div class="learn-card reveal">
-                        <div class="learn-row">
-                            <div class="learn-info">
-                                <span class="learn-name">Documentation &amp; Reporting</span>
-                                <span class="learn-note">HTB Academy — CPTS path</span>
+                        <div class="learn-card reveal">
+                            <div class="learn-row">
+                                <div class="learn-info">
+                                    <span class="learn-name">Security Monitoring &amp; SIEM Fundamentals</span>
+                                    <span class="learn-note">HTB Academy — CJCA path</span>
+                                </div>
+                                <span class="learn-pct">18%</span>
                             </div>
-                            <span class="learn-pct">15%</span>
+                            <div class="bar"><span class="fill" style="--w:18%"></span></div>
                         </div>
-                        <div class="bar"><span class="fill" style="--w:15%"></span></div>
                     </div>
                 </div>
 
                 <!-- Now / Next / Done quick board -->
                 <div class="board reveal">
                     <div class="board-col">
-                        <h4 class="board-title"><span class="accent">▸</span> now</h4>
+                        <h4 class="board-title"><span class="accent">▸</span> <span data-i18n="board.now">now</span></h4>
                         <ul class="board-list">
                             <!-- EDIT -->
-                            <li>Active Directory Enumeration &amp; Attacks</li>
-                            <li>CPTS exam prep — full lab walkthroughs</li>
+                            <li>HTB CJCA — Pentest in a Nutshell</li>
+                            <li>HTB CJCA — Hacking WordPress</li>
                         </ul>
                     </div>
                     <div class="board-col">
-                        <h4 class="board-title"><span class="accent">▸</span> next</h4>
+                        <h4 class="board-title"><span class="accent">▸</span> <span data-i18n="board.next">next</span></h4>
                         <ul class="board-list">
-                            <li>Pivoting, Tunneling &amp; Port Forwarding</li>
-                            <li>Documentation &amp; Reporting</li>
+                            <li>HTB COAE</li>
+                            <li>HTB CWPE</li>
                         </ul>
                     </div>
                     <div class="board-col">
-                        <h4 class="board-title"><span class="accent">▸</span> done</h4>
+                        <h4 class="board-title"><span class="accent">▸</span> <span data-i18n="board.done">done</span></h4>
                         <ul class="board-list done">
-                            <li>Network Enumeration with Nmap</li>
-                            <li>Footprinting &amp; Password Attacks</li>
+                            <li>HTB CWES learning path</li>
+                            <li>HTB CPTS learning path</li>
                         </ul>
                     </div>
                 </div>

@@ -15,42 +15,43 @@
         <section id="certs" class="section certs">
             <div class="container">
                 <p class="page-crumb">visitor@tanathorn:<span class="accent">~/roadmap</span>$ cat goals.md</p>
-                <h2 class="section-title" data-index="05"><span class="hash">#</span> roadmap <span class="title-sub">// certifications &amp; goals</span></h2>
+                <h2 class="section-title" data-index="05"><span class="hash">#</span> <span data-i18n="nav.roadmap">roadmap</span> <span class="title-sub" data-i18n-html="roadmap.sub">// certifications &amp; goals</span></h2>
                 <div class="timeline">
                     <!-- ============================================================
-                         EDIT each step. state class: done | active | planned
+                         EDIT each step. state class: done | active | studied | planned
+                         (studied = finished the learning path, exam not taken yet)
                     ============================================================ -->
-                    <div class="tl-item done reveal">
-                        <span class="tl-node"></span>
-                        <div class="tl-content">
-                            <span class="tl-state">✓ COMPLETED</span>
-                            <h3>HTB Academy — Foundational Modules</h3>
-                            <p>Getting started, network enumeration with Nmap, footprinting, and password attacks.</p>
-                        </div>
-                    </div>
                     <div class="tl-item active reveal">
                         <span class="tl-node"></span>
                         <div class="tl-content">
-                            <span class="tl-state">● IN PROGRESS</span>
+                            <span class="tl-state" data-i18n="rm.inprogress">● IN PROGRESS</span>
+                            <h3>HTB CJCA — Certified Junior Cybersecurity Associate</h3>
+                            <p>Current focus — the hands-on foundational path across offensive &amp; defensive skills (web, traffic analysis, SIEM monitoring).</p>
+                            <div class="bar"><span class="fill" style="--w:76%"></span></div>
+                        </div>
+                    </div>
+                    <div class="tl-item studied reveal">
+                        <span class="tl-node"></span>
+                        <div class="tl-content">
+                            <span class="tl-state" data-i18n="rm.studied">◐ COMPLETED — EXAM NEXT</span>
+                            <h3>HTB CWES — Certified Web Exploitation Specialist</h3>
+                            <p>Learning path complete — preparing for the hands-on exam.</p>
+                        </div>
+                    </div>
+                    <div class="tl-item studied reveal">
+                        <span class="tl-node"></span>
+                        <div class="tl-content">
+                            <span class="tl-state" data-i18n="rm.studied">◐ COMPLETED — EXAM NEXT</span>
                             <h3>HTB CPTS — Certified Penetration Testing Specialist</h3>
-                            <p>My main focus right now — working through the HTB Academy Penetration Tester path toward the fully hands-on exam.</p>
-                            <div class="bar"><span class="fill" style="--w:62%"></span></div>
+                            <p data-i18n="rm2.desc">Learning path complete — preparing for the hands-on exam.</p>
                         </div>
                     </div>
                     <div class="tl-item planned reveal">
                         <span class="tl-node"></span>
                         <div class="tl-content">
-                            <span class="tl-state">○ PLANNED</span>
+                            <span class="tl-state" data-i18n="rm.planned">○ PLANNED</span>
                             <h3>OSCP — Offensive Security Certified Professional</h3>
-                            <p>The big one. 24-hour hands-on exam. Goal for next year.</p>
-                        </div>
-                    </div>
-                    <div class="tl-item planned reveal">
-                        <span class="tl-node"></span>
-                        <div class="tl-content">
-                            <span class="tl-state">○ PLANNED</span>
-                            <h3>CRTP / Red Team Path</h3>
-                            <p>Active Directory &amp; red-team specialization after OSCP.</p>
+                            <p data-i18n="rm3.desc">The big one. 24-hour hands-on exam. Goal for next year.</p>
                         </div>
                     </div>
                 </div>

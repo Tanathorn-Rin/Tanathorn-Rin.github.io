@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../"><!-- REQUIRED: posts live in /posts/ — resolves styles.css, script.js & nav to the site root -->
+    <title>POST TITLE :: tanathorn</title>
+    <meta name="description" content="Short description of the post.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main id="view" class="page">
+        <section id="post" class="section post-section">
+            <div class="container">
+                <p class="page-crumb">visitor@tanathorn:<span class="accent">~/blog/POST-ID</span>$ cat notes.md</p>
+                <a class="post-back" href="blog.html">&larr; back to blog</a>
+                <article class="post reveal">
+                    <div class="post-head">
+                        <span class="wu-type type-notes">NOTES</span><!-- type-htb | type-ctf | type-notes -->
+                        <span class="wu-date">2026-01-01</span>
+                    </div>
+                    <h1 class="post-title">Post title</h1>
+                    <div class="wu-meta"><span class="chip">tag</span><span class="chip">tag</span></div>
+
+                    <!-- English (required) -->
+                    <div class="lang-block post-body" data-lang="en">
+                        <p>Intro paragraph.</p>
+                        <h2>Section heading</h2>
+                        <p>Body text. Inline <code>code</code> looks like this.</p>
+                        <pre><code>some --command --here</code></pre>
+                        <ul>
+                            <li>bullet one</li>
+                            <li>bullet two</li>
+                        </ul>
+                    </div>
+
+                    <!-- 日本語 (optional — delete this block if you won't translate) -->
+                    <div class="lang-block post-body" data-lang="ja">
+                        <p>（日本語の本文をここに）</p>
+                    </div>
+
+                    <!-- 繁體中文 (optional — delete this block if you won't translate) -->
+                    <div class="lang-block post-body" data-lang="zh">
+                        <p>（繁體中文內文放這裡）</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
