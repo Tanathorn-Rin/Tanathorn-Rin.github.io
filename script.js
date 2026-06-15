@@ -616,16 +616,36 @@
                  '<span style="color:#ffb000">[NOTES]</span> XSS 的運作原理',
                  '<span class="muted">&rarr; 執行</span> goto blog']
         },
+        SECRETS: {
+            en: ['<span class="muted"># .secrets — you actually looked. respect.</span>',
+                 'curiosity like this is the whole job: read the source, poke the',
+                 'inputs, keep digging. if that is you, we would get along.',
+                 '<span class="accent">hiring or building a team?</span> I am open to junior pentest roles,',
+                 'CTF squads, and collabs &rarr; <a href="mailto:so.tanathorn@gmail.com">so.tanathorn@gmail.com</a>',
+                 '<span class="ok">// stay curious, stay ethical.</span>'],
+            ja: ['<span class="muted"># .secrets — 本当に見つけたね。敬意を表する。</span>',
+                 'この好奇心こそが仕事の本質：ソースを読み、入力をいじり、',
+                 '掘り続ける。それが君なら、きっと気が合う。',
+                 '<span class="accent">採用・チーム作り？</span> ジュニアのペンテスト職、CTF チーム、',
+                 'コラボ歓迎です &rarr; <a href="mailto:so.tanathorn@gmail.com">so.tanathorn@gmail.com</a>',
+                 '<span class="ok">// 好奇心を持ち、倫理を守れ。</span>'],
+            zh: ['<span class="muted"># .secrets — 你真的找到了。佩服。</span>',
+                 '這種好奇心正是這份工作的本質：讀原始碼、戳輸入、',
+                 '持續挖掘。如果這就是你，我們一定合得來。',
+                 '<span class="accent">在招人或組隊？</span> 我開放初級滲透測試職缺、CTF 隊伍與合作，',
+                 '歡迎聯絡 &rarr; <a href="mailto:so.tanathorn@gmail.com">so.tanathorn@gmail.com</a>',
+                 '<span class="ok">// 保持好奇，恪守道德。</span>']
+        },
         LS: {
-            en: ['<span class="accent">about.txt</span>   <span class="accent">ops/</span>   <span class="accent">learning/</span>   <span class="accent">progress/</span>   <span class="accent">arsenal/</span>   <span class="accent">roadmap/</span>   <span class="accent">blog/</span>   <span class="accent">contact.sh</span>   <span class="muted">.secrets</span>'],
-            ja: ['<span class="accent">about.txt</span>   <span class="accent">ops/</span>   <span class="accent">learning/</span>   <span class="accent">progress/</span>   <span class="accent">arsenal/</span>   <span class="accent">roadmap/</span>   <span class="accent">blog/</span>   <span class="accent">contact.sh</span>   <span class="muted">.secrets</span>'],
-            zh: ['<span class="accent">about.txt</span>   <span class="accent">ops/</span>   <span class="accent">learning/</span>   <span class="accent">progress/</span>   <span class="accent">arsenal/</span>   <span class="accent">roadmap/</span>   <span class="accent">blog/</span>   <span class="accent">contact.sh</span>   <span class="muted">.secrets</span>']
+            en: ['<span class="accent">about.txt</span>   <span class="accent">ops/</span>   <span class="accent">learning/</span>   <span class="accent">progress/</span>   <span class="accent">arsenal/</span>   <span class="accent">roadmap/</span>   <span class="accent">blog/</span>   <span class="accent">contact.sh</span>'],
+            ja: ['<span class="accent">about.txt</span>   <span class="accent">ops/</span>   <span class="accent">learning/</span>   <span class="accent">progress/</span>   <span class="accent">arsenal/</span>   <span class="accent">roadmap/</span>   <span class="accent">blog/</span>   <span class="accent">contact.sh</span>'],
+            zh: ['<span class="accent">about.txt</span>   <span class="accent">ops/</span>   <span class="accent">learning/</span>   <span class="accent">progress/</span>   <span class="accent">arsenal/</span>   <span class="accent">roadmap/</span>   <span class="accent">blog/</span>   <span class="accent">contact.sh</span>']
         }
     };
     function L(name) { return TXT[name][LANG] || TXT[name].en; }
 
     var COMMAND_NAMES = ['help', 'whoami', 'about', 'ops', 'learning', 'progress', 'skills', 'certs',
-        'blog', 'contact', 'trace', 'ls', 'date', 'echo', 'clear', 'history', 'sudo', 'goto'];
+        'blog', 'contact', 'trace', 'ls', 'cat', 'date', 'echo', 'clear', 'history', 'sudo', 'goto'];
 
     var consoleEl, output, inputLine, input, sizer;
     var historyArr = [], hidx = null;
@@ -661,7 +681,16 @@
             case 'certs': case 'roadmap': printLines(L('CERTS')); break;
             case 'contact': case 'social': printLines(L('CONTACT')); break;
             case 'blog': case 'writeups': case 'research': printLines(L('BLOG')); break;
-            case 'ls': case 'dir': printLines(L('LS')); break;
+            case 'ls': case 'dir':
+                printLines(L('LS'));
+                if (args.some(function (a) { return a.charAt(0) === '-' && a.indexOf('a') !== -1; }))
+                    out('<span class="muted">.</span>   <span class="muted">..</span>   <span class="muted">.secrets</span>');
+                break;
+            case 'cat':
+                if (args[0] === '.secrets' || args[0] === 'secrets') printLines(L('SECRETS'));
+                else if (!args.length) out('<span style="color:var(--amber)">cat:</span> usage: cat &lt;file&gt; <span class="muted">(hint: run</span> ls<span class="muted">)</span>');
+                else out('<span style="color:var(--amber)">cat:</span> ' + esc(args[0]) + ': permission denied <span class="muted">— nice try ;)</span>');
+                break;
             case 'date': out(new Date().toString()); break;
             case 'pwd': out('/home/visitor'); break;
             case 'echo': out(esc(args.join(' '))); break;
