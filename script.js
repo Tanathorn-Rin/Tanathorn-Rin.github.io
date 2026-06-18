@@ -181,7 +181,8 @@
         'term.sudo':      { en: 'nice try — visitor has no root here 😏', ja: 'いい試みだ — 訪問者に root 権限はない 😏', zh: '想得美 — 訪客在這裡沒有 root 權限 😏' },
         'term.exit':      { en: 'connection kept alive. you can\'t leave that easily ;)', ja: '接続は維持されている。そう簡単には抜け出せない ;)', zh: '連線仍保持。你沒那麼容易離開 ;)' },
         'term.target':    { en: 'target acquired', ja: 'ターゲット捕捉', zh: '已鎖定目標' },
-        'term.logged':    { en: 'you\'re already being logged. try', ja: 'すでに記録されている。試せ', zh: '你已被記錄。試試' },
+        'term.logged':    { en: 'you\'re already being logged.', ja: 'すでに記録されている。', zh: '你已被記錄。' },
+        'term.try':       { en: 'try', ja: '試せ', zh: '試試' },
         'boot.watched':   { en: 'you are being watched.', ja: '監視されている。', zh: '你正被監視。' },
         'boot.granted':   { en: '⚠  ACCESS GRANTED  ⚠', ja: '⚠  アクセス許可  ⚠', zh: '⚠  存取已授權  ⚠' }
     };
@@ -816,7 +817,7 @@
             runSubmit('whoami'); clearInput();
             typeInto('help', function () {
                 runSubmit('help'); clearInput();
-                out('<span class="muted">// ' + t('term.target') + ': ' + esc(_f.plat) + ' — ' + t('term.logged') + '</span> <span class="accent">trace</span>');
+                out('<span class="muted">// ' + t('term.target') + ': ' + esc(_f.plat) + ' — ' + t('term.logged') + ' ' + t('term.try') + '</span> <span class="accent">trace</span>');
                 input.readOnly = false; focusInput();
             });
         });
