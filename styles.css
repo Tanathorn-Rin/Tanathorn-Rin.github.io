@@ -375,6 +375,27 @@ a { color: inherit; text-decoration: none; }
 @keyframes tagpulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.62; } }
 .arsenal-legend { color: var(--muted); font-size: 0.78rem; margin-bottom: 22px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .arsenal-legend .tag { cursor: default; }
+/* clickable tool tags — pointer cursor + focus ring */
+.tag-info { cursor: pointer; }
+.tag-info:focus-visible { outline: 1px solid var(--red); outline-offset: 2px; }
+
+/* ---------- tool modal (explains what a tool does) ---------- */
+.tool-modal { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 20px; }
+.tool-modal[hidden] { display: none; }
+.tool-modal-backdrop { position: absolute; inset: 0; background: rgba(5,5,7,0.72); backdrop-filter: blur(3px); animation: page-in 0.18s ease; }
+.tool-modal-box { position: relative; width: 100%; max-width: 460px; background: var(--bg-soft); border: 1px solid var(--red); border-radius: 10px; box-shadow: 0 0 30px var(--red-glow); overflow: hidden; animation: modal-pop 0.18s ease; }
+@keyframes modal-pop { from { opacity: 0; transform: translateY(8px) scale(0.98); } to { opacity: 1; transform: none; } }
+.tool-modal-bar { display: flex; align-items: center; gap: 10px; padding: 9px 12px; background: var(--bg-card); border-bottom: 1px solid var(--line); }
+.tool-modal-dots { display: flex; gap: 6px; }
+.tool-modal-dots i { width: 10px; height: 10px; border-radius: 50%; background: #3a3a40; display: block; }
+.tool-modal-dots i:first-child { background: var(--red); }
+.tool-modal-title { color: var(--muted); font-size: 0.78rem; letter-spacing: 1px; }
+.tool-modal-close { margin-left: auto; background: transparent; border: none; color: var(--muted); font-family: var(--mono); font-size: 0.95rem; cursor: pointer; padding: 0 4px; transition: color 0.15s; }
+.tool-modal-close:hover, .tool-modal-close:focus-visible { color: var(--red); }
+.tool-modal-body { padding: 18px 20px 22px; }
+.tool-modal-cmd { font-size: 0.85rem; color: var(--white); margin-bottom: 12px; }
+.tool-modal-cmd .accent { margin-right: 6px; }
+.tool-modal-desc { color: var(--text); font-size: 0.9rem; line-height: 1.65; }
 
 /* ---------- writeups / research ---------- */
 .wu-intro { color: var(--muted); font-size: 0.85rem; margin-bottom: 18px; }

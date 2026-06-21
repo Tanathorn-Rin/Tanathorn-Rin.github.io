@@ -15,13 +15,23 @@
         <section id="learning" class="section learning">
             <div class="container">
                 <p class="page-crumb">visitor@tanathorn:<span class="accent">~/learning</span>$ cat progress.log</p>
-                <h2 class="section-title" data-index="03"><span class="hash">#</span> <span data-i18n="nav.learning">learning</span> <span class="title-sub">// HTB Academy · CWES + CPTS + CJCA</span></h2>
+                <h2 class="section-title" data-index="03"><span class="hash">#</span> <span data-i18n="nav.learning">learning</span> <span class="title-sub">// HTB Academy · CWES + CPTS + CJCA · COAE</span></h2>
                 <!-- ============================================================
                      EDIT: each <div class="learn-track"> is one cert / path.
                      • Completed cert  -> add class "done": header only (name, sub, 100%).
                      • In-progress     -> keep .learning-grid of .learn-card modules;
                        set BOTH the .learn-pct and style="--w:NN%"; overall % auto-calcs.
                 ============================================================ -->
+                 <div class="learn-track done">
+                    <div class="track-head">
+                        <div class="track-id">
+                            <span class="track-name">HTB CJCA</span>
+                            <span class="track-note">Certified Junior Cybersecurity Associate · learning path complete (exam pending)</span>
+                        </div>
+                        <span class="track-pct">100%</span>
+                    </div>
+                </div>               
+                
                 <div class="learn-track done">
                     <div class="track-head">
                         <div class="track-id">
@@ -42,47 +52,28 @@
                     </div>
                 </div>
 
+
+
                 <div class="learn-track">
                     <div class="track-head">
                         <div class="track-id">
-                            <span class="track-name">HTB CJCA</span>
-                            <span class="track-note">Certified Junior Cybersecurity Associate · also in progress</span>
+                            <span class="track-name">HTB COAE</span>
+                            <span class="track-note">attacking AI/ML systems · adversarial ML, LLM prompt injection &amp; jailbreaking, AI red-teaming · just started</span>
                         </div>
                         <span class="track-pct" data-track-pct>—</span>
                     </div>
                     <div class="learning-grid">
-                        <!-- EDIT: your CJCA modules + progress (plain text — edit directly) -->
+                        <!-- EDIT: add your COAE modules + progress here as you go (plain text — edit directly).
+                             Set BOTH the .learn-pct and style="--w:NN%"; the overall % auto-calcs. -->
                         <div class="learn-card reveal">
                             <div class="learn-row">
                                 <div class="learn-info">
-                                    <span class="learn-name">Pentest in a Nutshell</span>
-                                    <span class="learn-note">HTB Academy — CJCA path</span>
+                                    <span class="learn-name">Introduction to AI Red Teaming</span>
+                                    <span class="learn-note">HTB Academy — COAE path</span>
                                 </div>
-                                <span class="learn-pct">100%</span>
+                                <span class="learn-pct">0%</span>
                             </div>
-                            <div class="bar"><span class="fill" style="--w:100%"></span></div>
-                        </div>
-
-                        <div class="learn-card reveal">
-                            <div class="learn-row">
-                                <div class="learn-info">
-                                    <span class="learn-name">Hacking WordPress</span>
-                                    <span class="learn-note">HTB Academy — CJCA path</span>
-                                </div>
-                                <span class="learn-pct">100%</span>
-                            </div>
-                            <div class="bar"><span class="fill" style="--w:100%"></span></div>
-                        </div>
-
-                        <div class="learn-card reveal">
-                            <div class="learn-row">
-                                <div class="learn-info">
-                                    <span class="learn-name">Security Monitoring &amp; SIEM Fundamentals</span>
-                                    <span class="learn-note">HTB Academy — CJCA path</span>
-                                </div>
-                                <span class="learn-pct">100%</span>
-                            </div>
-                            <div class="bar"><span class="fill" style="--w:100%"></span></div>
+                            <div class="bar"><span class="fill" style="--w:0%"></span></div>
                         </div>
                     </div>
                 </div>
@@ -93,13 +84,13 @@
                         <h4 class="board-title"><span class="accent">▸</span> <span data-i18n="board.now">now</span></h4>
                         <ul class="board-list">
                             <!-- EDIT -->
-                            <li>HTB Certified Junior Cybersecurity Associate</li>
+                            <li>HTB Certified Offensive AI Expert</li>
                         </ul>
                     </div>
                     <div class="board-col">
                         <h4 class="board-title"><span class="accent">▸</span> <span data-i18n="board.next">next</span></h4>
                         <ul class="board-list">
-                            <li>HTB Certified Offensive AI Expert</li>
+                            <li>OSCP — Offensive Security Certified Professional</li>
                         </ul>
                     </div>
                     <div class="board-col">
@@ -107,6 +98,7 @@
                         <ul class="board-list done">
                             <li>HTB Certified Web Exploitation Specialist</li>
                             <li>HTB Certified Penetration Testing Specialist</li>
+                            <li>HTB Certified Junior Cybersecurity Associate</li>
                         </ul>
                     </div>
                 </div>

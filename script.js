@@ -59,6 +59,31 @@
         'roadmap.sub':  { en: '// certifications &amp; goals', ja: '// 資格と目標', zh: '// 證照與目標' },
         'progress.sub': { en: '// live training stats', ja: '// リアルタイム学習統計', zh: '// 即時訓練數據' },
 
+        // ---- current ops (cards): status tags, the "progress" label, and per-op title/desc ----
+        'ops.done':     { ja: '✓ 完了',   zh: '✓ 完成' },
+        'ops.active':   { ja: '● 進行中', zh: '● 進行中' },
+        'ops.progress': { ja: '進捗',     zh: '進度' },
+        'ops.op1.title': { ja: 'HTB CJCA 対策', zh: 'HTB CJCA 準備' },
+        'ops.op1.desc': {
+            ja: 'HTB Certified Junior Cybersecurity Associate (HTB CJCA) は、受験者のセキュリティ評価スキルを問う実践重視の資格です。保有者は攻撃・防御の両面にわたる基礎的な技術力を示し、一般的な脆弱性の特定、基本的な（ポスト）エクスプロイト、潜在的なセキュリティ上の弱点の認識ができます。さらに SIEM を用いたセキュリティ監視、ネットワークトラフィックやログの分析、侵入検知も行えます。これらのハンズオン経験とハイブリッドなスキルセットにより、企業環境におけるセキュリティ課題の評価と報告が可能です。',
+            zh: 'HTB Certified Junior Cybersecurity Associate (HTB CJCA) 是一項高度實作導向的認證，評估考生的資安評估能力。持證者展現橫跨攻擊與防禦領域的基礎技術能力，能夠辨識常見漏洞、執行基本的（後）滲透，並察覺潛在的安全缺口。他們也能進行 SIEM 輔助的安全監控、分析網路流量與日誌，以及偵測入侵。憑藉這些實作經驗與混合技能組合，能在企業環境中評估並回報資安問題。'
+        },
+        'ops.op2.title': { ja: 'Web アプリ診断ラボ', zh: 'Web 應用滲透實驗室' },
+        'ops.op2.desc': {
+            ja: 'OWASP Top 10（SQLi・XSS・SSRF・IDOR）を含む、意図的に脆弱な Web アプリを構築。',
+            zh: '建立一個刻意設計含 OWASP Top 10（SQLi、XSS、SSRF、IDOR）漏洞的 Web 應用。'
+        },
+        'ops.op3.title': { ja: 'HTB Certified Offensive AI Expert 対策', zh: 'HTB Certified Offensive AI Expert 準備' },
+        'ops.op3.desc': {
+            ja: 'HTB COAE は、Google と共同開発したカリキュラムに基づき、AI・ML システムの脆弱性の特定と悪用に関する知識を問う実践型資格です。保有者は敵対的機械学習、LLM のプロンプトインジェクションとジェイルブレイク、LLM 出力の悪用、AI アプリケーション・システムのセキュリティ、AI 防御、AI プライバシーの能力を示します。カリキュラムは Google の SAIF、OWASP ML Security Top 10、OWASP Agentic Top 10、OWASP Top 10 for LLM Applications 2025 に準拠しています。保有者はプロフェッショナルな AI レッドチーム評価を実施し、クライアント向けのレポートを作成できます。',
+            zh: 'HTB COAE 是一項實作型認證，依據與 Google 共同開發的課程，評估辨識與利用 AI 及 ML 系統漏洞的知識。持證者展現對抗式機器學習、LLM 提示注入與越獄、LLM 輸出利用、AI 應用與系統安全、AI 防禦及 AI 隱私等能力。課程對齊 Google 的 SAIF、OWASP ML Security Top 10、OWASP Agentic Top 10，以及 OWASP Top 10 for LLM Applications 2025。持證者也能執行專業的 AI 紅隊評估並撰寫可交付客戶的報告。'
+        },
+        'ops.op4.title': { ja: '脆弱な Web アプリ演習', zh: '漏洞 Web 應用練習' },
+        'ops.op4.desc': {
+            ja: '意図的に脆弱な Web アプリ（OWASP Juice Shop・DVWA・WebGoat）で実践演習を行い、OWASP Top 10 ——SQL インジェクション、XSS、CSRF、アクセス制御の不備、SSRF、安全でないデシリアライゼーション——を徹底的に練習。発見した内容と攻略記事はブログに反映。',
+            zh: '在刻意設計的漏洞 Web 應用（OWASP Juice Shop、DVWA、WebGoat）上進行實戰練習，鑽研 OWASP Top 10：SQL injection、XSS、CSRF、存取控制失效、SSRF 與不安全的反序列化。發現與攻略筆記都會放上部落格。'
+        },
+
         // ---- about ----
         'about.bio1': {
             en: 'Hi, I\'m <span class="accent">Tanathorn</span> — a security enthusiast transitioning into offensive security. I spend my time on Hack The Box &amp; HTB Academy, breaking down web apps, and documenting everything I learn.',
@@ -66,9 +91,9 @@
             zh: '嗨，我是 <span class="accent">Tanathorn</span> — 一位正轉向攻擊性資安的資安愛好者。我泡在 Hack The Box 與 HTB Academy，拆解 Web 應用程式，並記錄學到的每一件事。'
         },
         'about.bio2': {
-            en: 'My objective is to become a professional penetration tester. I\'ve completed the <span class="accent">HTB CPTS</span> learning path and I\'m now working through the <span class="accent">HTB CJCA</span> path (exams + OSCP next). This website serves as my active lab notebook, documenting my attack strategies, ongoing research, and technical growth.',
-            ja: '目標はプロのペネトレーションテスターになることです。<span class="accent">HTB CPTS</span> の学習パスを修了し、現在は <span class="accent">HTB CJCA</span> パスに取り組んでいます（試験と OSCP はこれから）。このサイトは私のラボノート — 攻撃手法・継続的なリサーチ・技術的な成長を記録しています。',
-            zh: '我的目標是成為專業滲透測試員。我已完成 <span class="accent">HTB CPTS</span> 學習路線，目前正在進行 <span class="accent">HTB CJCA</span> 路線（考試與 OSCP 接下來）。這個網站是我的實驗筆記 — 記錄我的攻擊策略、持續研究與技術成長。'
+            en: 'My objective is to become a professional penetration tester. I\'ve completed the <span class="accent">HTB CWES, CPTS, CJCA</span> learning paths and I\'m now working through the <span class="accent">HTB Certified Offensive AI Expert</span> path (exams + OSCP next). This website serves as my active lab notebook, documenting my attack strategies, ongoing research, and technical growth.',
+            ja: '目標はプロのペネトレーションテスターになることです。<span class="accent">HTB CWES・CPTS・CJCA</span> の学習パスを修了し、現在は <span class="accent">HTB Certified Offensive AI Expert</span> パスに取り組んでいます（試験と OSCP はこれから）。このサイトは私のラボノート — 攻撃手法・継続的なリサーチ・技術的な成長を記録しています。',
+            zh: '我的目標是成為專業滲透測試員。我已完成 <span class="accent">HTB CWES、CPTS、CJCA</span> 學習路線，目前正在進行 <span class="accent">HTB Certified Offensive AI Expert</span> 路線（考試與 OSCP 接下來）。這個網站是我的實驗筆記 — 記錄我的攻擊策略、持續研究與技術成長。'
         },
         'stat.boxes':    { en: 'boxes rooted',     ja: '攻略したマシン',   zh: '攻克的機器' },
         'stat.ctfs':     { en: 'CTFs played',      ja: '参加した CTF',     zh: '參加的 CTF' },
@@ -483,27 +508,27 @@
         },
         WHOAMI: {
             en: ['tanathorn <span class="muted">::</span> offensive security / penetration tester',
-                 '<span class="muted">Finished the HTB CPTS path — now on HTB CJCA. I break web apps, AD, and boxes for sport.</span>'],
+                 '<span class="muted">Finished CWES, CPTS &amp; CJCA — now on HTB Certified Offensive AI Expert. I break web apps, AD, and boxes for sport.</span>'],
             ja: ['tanathorn <span class="muted">::</span> オフェンシブセキュリティ / ペネトレーションテスター',
-                 '<span class="muted">HTB CPTS パス修了 — 現在は HTB CJCA。Web アプリ、AD、マシンを趣味で攻略中。</span>'],
+                 '<span class="muted">CWES・CPTS・CJCA 修了 — 現在は HTB Certified Offensive AI Expert。Web アプリ、AD、マシンを趣味で攻略中。</span>'],
             zh: ['tanathorn <span class="muted">::</span> 攻擊性資安 / 滲透測試員',
-                 '<span class="muted">完成 HTB CPTS 路線 — 目前正攻 HTB CJCA。把破解 Web 應用、AD 與機器當興趣。</span>']
+                 '<span class="muted">完成 CWES、CPTS 與 CJCA — 目前正攻 HTB Certified Offensive AI Expert。把破解 Web 應用、AD 與機器當興趣。</span>']
         },
         ABOUT: {
             en: ['<span class="muted">$ cat about.txt</span>',
                  'Security enthusiast transitioning into offensive security.',
                  'I live on Hack The Box &amp; HTB Academy, dismantle web apps,',
-                 'and document every exploit. CPTS path done — now HTB CJCA &rarr; OSCP.',
+                 'and document every exploit. CJCA path done — now Offensive AI Expert &rarr; OSCP.',
                  '<span class="muted">&rarr; run</span> goto about'],
             ja: ['<span class="muted">$ cat about.txt</span>',
                  'オフェンシブセキュリティを目指すセキュリティ愛好家。',
                  'Hack The Box と HTB Academy に没頭し、Web アプリを分解して、',
-                 '全エクスプロイトを記録。CPTS パス修了 — 現在 HTB CJCA &rarr; OSCP。',
+                 '全エクスプロイトを記録。CJCA パス修了 — 現在 Offensive AI Expert &rarr; OSCP。',
                  '<span class="muted">&rarr; 実行</span> goto about'],
             zh: ['<span class="muted">$ cat about.txt</span>',
                  '正轉向攻擊性資安的資安愛好者。',
                  '我泡在 Hack The Box 與 HTB Academy，拆解 Web 應用，',
-                 '並記錄每個漏洞利用。CPTS 路線完成 — 目前 HTB CJCA &rarr; OSCP。',
+                 '並記錄每個漏洞利用。CJCA 路線完成 — 目前 Offensive AI Expert &rarr; OSCP。',
                  '<span class="muted">&rarr; 執行</span> goto about']
         },
         OPS: {
@@ -524,20 +549,23 @@
                  '<span class="muted">&rarr; 執行</span> goto ops']
         },
         LEARNING: {
-            en: ['<span class="accent">LEARNING</span> <span class="muted">// HTB Academy · CWES + CPTS + CJCA</span>',
+            en: ['<span class="accent">LEARNING</span> <span class="muted">// HTB Academy · CWES + CPTS + CJCA · COAE</span>',
                  'HTB CWES — Web Exploitation ....... 100%',
                  'HTB CPTS — Penetration Tester ..... 100%',
-                 'HTB CJCA — Junior Cybersecurity ... 53%',
+                 'HTB CJCA — Junior Cybersecurity ... 100%',
+                 'HTB COAE — Offensive AI Expert .... 0%',
                  '<span class="muted">&rarr; run</span> goto learning'],
-            ja: ['<span class="accent">学習中</span> <span class="muted">// HTB Academy · CWES + CPTS + CJCA</span>',
+            ja: ['<span class="accent">学習中</span> <span class="muted">// HTB Academy · CWES + CPTS + CJCA · COAE</span>',
                  'HTB CWES — Web エクスプロイト ... 100%',
                  'HTB CPTS — ペネトレーションテスター ... 100%',
-                 'HTB CJCA — ジュニア・サイバーセキュリティ ... 53%',
+                 'HTB CJCA — ジュニア・サイバーセキュリティ ... 100%',
+                 'HTB COAE — オフェンシブ AI エキスパート ... 0%',
                  '<span class="muted">&rarr; 実行</span> goto learning'],
-            zh: ['<span class="accent">學習中</span> <span class="muted">// HTB Academy · CWES + CPTS + CJCA</span>',
+            zh: ['<span class="accent">學習中</span> <span class="muted">// HTB Academy · CWES + CPTS + CJCA · COAE</span>',
                  'HTB CWES — Web 漏洞利用 .......... 100%',
                  'HTB CPTS — 滲透測試員 ............. 100%',
-                 'HTB CJCA — 初級資安 .............. 53%',
+                 'HTB CJCA — 初級資安 .............. 100%',
+                 'HTB COAE — 攻擊性 AI 專家 ......... 0%',
                  '<span class="muted">&rarr; 執行</span> goto learning']
         },
         SKILLS: {
@@ -563,22 +591,25 @@
         CERTS: {
             en: ['<span class="accent">ROADMAP</span>',
                  '<span class="ok">[✓]</span> HTB Academy — Foundational Modules',
+                 '<span class="accent">[●]</span> HTB COAE — Offensive AI Expert, in progress',
+                 '<span class="accent">[●]</span> HTB CJCA — path done, exam next',
                  '<span class="accent">[●]</span> HTB CPTS — path done, exam next',
-                 '<span class="accent">[●]</span> HTB CJCA — in progress (53%)',
                  '<span class="muted">[ ]</span> OSCP — planned',
                  '<span class="muted">[ ]</span> CRTP / Red Team — planned',
                  '<span class="muted">&rarr; run</span> goto certs'],
             ja: ['<span class="accent">ロードマップ</span>',
                  '<span class="ok">[✓]</span> HTB Academy — 基礎モジュール',
+                 '<span class="accent">[●]</span> HTB COAE — オフェンシブ AI エキスパート、進行中',
+                 '<span class="accent">[●]</span> HTB CJCA — パス修了・試験はこれから',
                  '<span class="accent">[●]</span> HTB CPTS — パス修了・試験はこれから',
-                 '<span class="accent">[●]</span> HTB CJCA — 進行中 (53%)',
                  '<span class="muted">[ ]</span> OSCP — 予定',
                  '<span class="muted">[ ]</span> CRTP / レッドチーム — 予定',
                  '<span class="muted">&rarr; 実行</span> goto certs'],
             zh: ['<span class="accent">路線圖</span>',
                  '<span class="ok">[✓]</span> HTB Academy — 基礎模組',
+                 '<span class="accent">[●]</span> HTB COAE — 攻擊性 AI 專家，進行中',
+                 '<span class="accent">[●]</span> HTB CJCA — 路線完成・尚未考試',
                  '<span class="accent">[●]</span> HTB CPTS — 路線完成・尚未考試',
-                 '<span class="accent">[●]</span> HTB CJCA — 進行中 (53%)',
                  '<span class="muted">[ ]</span> OSCP — 計畫中',
                  '<span class="muted">[ ]</span> CRTP / 紅隊 — 計畫中',
                  '<span class="muted">&rarr; 執行</span> goto certs']
@@ -1051,6 +1082,173 @@
             });
         });
     }
+    /* arsenal: short "what it does" blurb shown when a tool tag is clicked.
+       Keyed by the tag's lowercased text. Tool names stay in English; the
+       description is shown in the active language (falls back to English). */
+    var TOOL_INFO = {
+        'nmap': {
+            en: 'Network mapper. Scans hosts for open ports, running services, version info, and OS fingerprints — usually the first recon step.',
+            ja: 'ネットワークマッパー。ホストの開放ポート・稼働中のサービス・バージョン情報・OSフィンガープリントをスキャンする。偵察の最初のステップとして使うことが多い。',
+            zh: '網路掃描器。掃描主機的開放埠、執行中的服務、版本資訊與作業系統指紋，通常是偵查的第一步。'
+        },
+        'gobuster': {
+            en: 'Brute-forces hidden web directories, files, DNS subdomains, and virtual hosts using wordlists.',
+            ja: 'ワードリストを使い、隠れたWebディレクトリ・ファイル・DNSサブドメイン・バーチャルホストを総当たりで探し出す。',
+            zh: '使用字典檔暴力列舉隱藏的網頁目錄、檔案、DNS 子網域與虛擬主機。'
+        },
+        'ffuf': {
+            en: '"Fuzz Faster U Fool" — a fast web fuzzer for finding directories, parameters, and vhosts.',
+            ja: '「Fuzz Faster U Fool」。ディレクトリ・パラメータ・vhostを高速に探索するWebファザー。',
+            zh: '「Fuzz Faster U Fool」——快速的網頁模糊測試工具，用於尋找目錄、參數與虛擬主機。'
+        },
+        'amass': {
+            en: 'Maps an organization’s external attack surface through deep DNS enumeration and OSINT.',
+            ja: '深いDNS列挙とOSINTにより、組織の外部攻撃面をマッピングする。',
+            zh: '透過深度 DNS 列舉與 OSINT，繪製組織的外部攻擊面。'
+        },
+        'burp suite': {
+            en: 'Intercepting web proxy. Inspect, modify, and replay HTTP(S) traffic — the core tool for web app testing.',
+            ja: '中間者型のWebプロキシ。HTTP(S)通信を傍受・改ざん・再送できる、Webアプリ診断の中核ツール。',
+            zh: '攔截式網頁代理。可檢視、修改並重送 HTTP(S) 流量，是網頁應用測試的核心工具。'
+        },
+        'metasploit': {
+            en: 'Exploitation framework with a large library of exploits, payloads, and post-exploitation modules.',
+            ja: '多数のエクスプロイト・ペイロード・ポストエクスプロイトモジュールを備えた攻撃フレームワーク。',
+            zh: '攻擊框架，內建大量的漏洞利用、酬載與後滲透模組。'
+        },
+        'sqlmap': {
+            en: 'Automates detecting and exploiting SQL injection to dump databases and pop shells.',
+            ja: 'SQLインジェクションの検出と悪用を自動化し、データベースのダンプやシェル奪取を行う。',
+            zh: '自動化偵測與利用 SQL injection，可傾印資料庫並取得 shell。'
+        },
+        'hydra': {
+            en: 'Fast network login brute-forcer supporting SSH, FTP, HTTP, RDP, and many other protocols.',
+            ja: 'SSH・FTP・HTTP・RDPなど多数のプロトコルに対応した高速ログイン総当たりツール。',
+            zh: '快速的網路登入暴力破解工具，支援 SSH、FTP、HTTP、RDP 等多種協定。'
+        },
+        'john': {
+            en: 'John the Ripper — offline password-hash cracker using dictionary and rule-based attacks.',
+            ja: 'John the Ripper。辞書攻撃とルールベース攻撃を使うオフラインのパスワードハッシュ解析ツール。',
+            zh: 'John the Ripper——使用字典與規則攻擊的離線密碼雜湊破解工具。'
+        },
+        'hashcat': {
+            en: 'GPU-accelerated password cracker — recovers hashes at high speed across many algorithms.',
+            ja: 'GPUを活用したパスワード解析ツール。多数のアルゴリズムのハッシュを高速にクラックする。',
+            zh: 'GPU 加速的密碼破解工具，可高速破解多種演算法的雜湊。'
+        },
+        'linpeas': {
+            en: 'Linux Privilege Escalation Awesome Script — enumerates a Linux host for privesc paths.',
+            ja: 'Linux Privilege Escalation Awesome Script。Linuxホストの権限昇格経路を列挙する。',
+            zh: 'Linux Privilege Escalation Awesome Script——列舉 Linux 主機的提權路徑。'
+        },
+        'winpeas': {
+            en: 'The Windows counterpart of linpeas — hunts for Windows privilege-escalation vectors.',
+            ja: 'linpeasのWindows版。Windowsの権限昇格の糸口を探し出す。',
+            zh: 'linpeas 的 Windows 版本——搜尋 Windows 的提權途徑。'
+        },
+        'bloodhound': {
+            en: 'Maps Active Directory relationships as a graph to reveal hidden attack paths to Domain Admin.',
+            ja: 'Active Directoryの関係性をグラフ化し、Domain Adminへの隠れた攻撃経路を可視化する。',
+            zh: '將 Active Directory 的關係繪製成圖，揭露通往 Domain Admin 的隱藏攻擊路徑。'
+        },
+        'mimikatz': {
+            en: 'Extracts plaintext passwords, hashes, and Kerberos tickets straight from Windows memory.',
+            ja: 'Windowsのメモリから平文パスワード・ハッシュ・Kerberosチケットを抽出する。',
+            zh: '直接從 Windows 記憶體中擷取明文密碼、雜湊與 Kerberos 票證。'
+        },
+        'kali linux': {
+            en: 'Debian-based distro preloaded with hundreds of pentesting and forensics tools.',
+            ja: '数百ものペンテスト・フォレンジックツールを標準搭載したDebianベースのディストリビューション。',
+            zh: '以 Debian 為基礎的發行版，預載數百種滲透測試與鑑識工具。'
+        },
+        'python': {
+            en: 'Go-to scripting language for writing exploits, automation, and custom tooling.',
+            ja: 'エクスプロイト作成・自動化・ツール開発に使われる定番のスクリプト言語。',
+            zh: '撰寫漏洞利用、自動化與自製工具的首選腳本語言。'
+        },
+        'bash': {
+            en: 'Unix shell for scripting, automation, and chaining tools together on Linux.',
+            ja: 'スクリプト作成や自動化、Linux上でのツール連携に使うUnixシェル。',
+            zh: '用於腳本撰寫、自動化以及在 Linux 上串接工具的 Unix shell。'
+        },
+        'powershell': {
+            en: 'Windows scripting shell — heavily used for AD enumeration and post-exploitation.',
+            ja: 'Windowsのスクリプトシェル。AD列挙やポストエクスプロイトで多用される。',
+            zh: 'Windows 的腳本 shell——常用於 AD 列舉與後滲透。'
+        },
+        'c': {
+            en: 'Low-level language for understanding memory, writing exploits, and crafting shellcode.',
+            ja: 'メモリの理解、エクスプロイトやシェルコードの作成に使う低水準言語。',
+            zh: '低階語言，用於理解記憶體、撰寫漏洞利用與 shellcode。'
+        }
+    };
+
+    // Build (once) the modal used to explain a tool, and return it.
+    function toolModal() {
+        var m = document.getElementById('tool-modal');
+        if (m) return m;
+        m = document.createElement('div');
+        m.id = 'tool-modal';
+        m.className = 'tool-modal';
+        m.setAttribute('hidden', '');
+        m.innerHTML =
+            '<div class="tool-modal-backdrop" data-close></div>' +
+            '<div class="tool-modal-box" role="dialog" aria-modal="true" aria-labelledby="tool-modal-name">' +
+                '<div class="tool-modal-bar">' +
+                    '<span class="tool-modal-dots"><i></i><i></i><i></i></span>' +
+                    '<span class="tool-modal-title">man</span>' +
+                    '<button type="button" class="tool-modal-close" data-close aria-label="close">✕</button>' +
+                '</div>' +
+                '<div class="tool-modal-body">' +
+                    '<p class="tool-modal-cmd"><span class="accent">$</span> man <span id="tool-modal-name"></span></p>' +
+                    '<p class="tool-modal-desc"></p>' +
+                '</div>' +
+            '</div>';
+        document.body.appendChild(m);
+        var prevFocus = null;
+        function close() {
+            m.setAttribute('hidden', '');
+            document.removeEventListener('keydown', onKey);
+            if (prevFocus && prevFocus.focus) prevFocus.focus();
+        }
+        function onKey(e) { if (e.key === 'Escape') close(); }
+        m.addEventListener('click', function (e) {
+            if (e.target.closest('[data-close]')) close();
+        });
+        m.open = function (name, desc) {
+            prevFocus = document.activeElement;
+            m.querySelector('#tool-modal-name').textContent = name;
+            m.querySelector('.tool-modal-desc').textContent = desc;
+            m.removeAttribute('hidden');
+            document.addEventListener('keydown', onKey);
+            m.querySelector('.tool-modal-close').focus();
+        };
+        return m;
+    }
+
+    // Make each arsenal tool tag clickable so it explains what the tool does.
+    function initArsenal() {
+        var tags = document.querySelectorAll('.arsenal-grid .tag');
+        if (!tags.length) return;
+        tags.forEach(function (tag) {
+            if (tag.dataset.info) return;
+            var key = tag.textContent.trim().toLowerCase();
+            var info = TOOL_INFO[key];
+            if (!info) return;
+            var desc = info[LANG] || info.en;
+            tag.dataset.info = '1';
+            tag.classList.add('tag-info');
+            tag.setAttribute('role', 'button');
+            tag.setAttribute('tabindex', '0');
+            tag.setAttribute('aria-label', key + ' — what it does');
+            var open = function () { toolModal().open(tag.textContent.trim(), desc); };
+            tag.addEventListener('click', open);
+            tag.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+            });
+        });
+    }
+
     function initView() {
         setActiveNav();
         applyI18n(document);
@@ -1059,6 +1257,7 @@
         initReadMore();
         initBlog();
         initTrackPct();
+        initArsenal();
         initTerminal();
         initForm();
         initProgress();

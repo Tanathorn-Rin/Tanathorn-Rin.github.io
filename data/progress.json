@@ -1,20 +1,19 @@
 {
-  "updated": "2026-06-19",
-  "paths_done": 2,
+  "updated": "2026-06-21",
+  "paths_done": 3,
   "learning_paths": [
-    { "name": "HTB CJCA", "progress": 98 },
+    { "name": "HTB CJCA", "progress": 100 },
     { "name": "HTB CWES", "progress": 100 },
-    { "name": "HTB CPTS", "progress": 100 }
+    { "name": "HTB CPTS", "progress": 100 },
+    { "name": "HTB COAE", "progress": 0 }
   ],
   "htb_academy": {
-    "cert": "CJCA",
-    "cert_full": "Certified Junior Cybersecurity Associate",
-    "path_progress": 98,
-    "modules_done": 19,
-    "modules_total": 20,
-    "recent_modules": [
-      "Pentest in a Nutshell"
-    ]
+    "cert": "COAE",
+    "cert_full": "Certified Offensive AI Expert",
+    "path_progress": 0,
+    "modules_done": 0,
+    "modules_total": null,
+    "recent_modules": []
   },
   "portswigger": {
     "by_topic": [
