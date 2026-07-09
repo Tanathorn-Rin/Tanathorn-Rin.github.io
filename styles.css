@@ -509,10 +509,10 @@ a { color: inherit; text-decoration: none; }
 /* pin bars to the row bottom so they align across columns even when a name wraps */
 .cert-row .bar { margin-top: auto; }
 .cert-list .prog-row { margin-bottom: 5px; }
-.cert-row.done .prog-row { margin-bottom: 0; }
 .cert-row .cert-full { color: var(--muted); font-size: 0.78rem; }
 .cert-row .tick { color: var(--green); }
 .cert-row.done .prog-row .muted { color: var(--green); }
+.cert-row.done .fill { background: var(--green); box-shadow: none; }
 
 /* ---------- contact ---------- */
 .contact-wrap { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; align-items: start; }

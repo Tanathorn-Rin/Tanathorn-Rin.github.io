@@ -973,7 +973,7 @@
                 if (ap >= 100) {
                     h += '<div class="cert-row done"><div class="prog-row">' +
                         '<span><span class="tick">✓</span> ' + label + '</span>' +
-                        '<span class="muted">100%</span></div></div>';
+                        '<span class="muted">100%</span></div>' + bar(100) + '</div>';
                     return;
                 }
                 h += '<div class="cert-row"><div class="prog-row"><span>' + label + '</span>' +
