@@ -173,23 +173,15 @@
         // ---- progress (rendered by JS) ----
         'prog.liveFrom':     { en: 'live from', ja: 'ライブ取得元', zh: '即時來源' },
         'prog.lastUpdated':  { en: 'last updated', ja: '最終更新', zh: '最後更新' },
-        'prog.pathProgress': { en: 'path progress', ja: 'パス進捗', zh: '路線進度' },
         'prog.modules':      { en: 'modules', ja: 'モジュール', zh: '模組' },
         'prog.cubes':        { en: 'cubes', ja: 'キューブ', zh: 'cubes' },
-        'prog.path':         { en: 'path', ja: 'パス', zh: '路線' },
         'prog.recentModules':{ en: 'recent modules', ja: '最近のモジュール', zh: '最近的模組' },
         'prog.labsSolved':   { en: 'labs solved', ja: '解いたラボ', zh: '已解實驗' },
         'prog.webacademy':   { en: 'Web Security Academy labs', ja: 'Web Security Academy のラボ', zh: 'Web Security Academy 實驗' },
-        'prog.htbMachines':  { en: 'HTB Machines', ja: 'HTB マシン', zh: 'HTB 機器' },
-        'prog.htbLabsSub':   { en: 'Hack The Box — labs pwned', ja: 'Hack The Box — 攻略したマシン', zh: 'Hack The Box — 已攻克機器' },
-        'prog.owned':        { en: 'owned', ja: '攻略', zh: '攻克' },
-        'prog.user':         { en: 'user', ja: 'ユーザー', zh: 'user' },
-        'prog.system':       { en: 'system', ja: 'システム', zh: 'system' },
-        'prog.recentPwned':  { en: 'recently pwned', ja: '最近攻略', zh: '最近攻克' },
         'prog.pathsDone':    { en: 'paths completed', ja: '修了パス', zh: '完成路線' },
         'prog.kpiLabs':      { en: 'PortSwigger labs', ja: 'PortSwigger ラボ', zh: 'PortSwigger 實驗' },
-        'prog.kpiBoxes':     { en: 'machines owned', ja: '攻略マシン', zh: '攻克機器' },
-        'prog.learnPaths':   { en: 'Learning Paths', ja: '学習パス', zh: '學習路線' },
+        'prog.kpiBoxes':     { en: 'HTB machines', ja: 'HTB マシン', zh: 'HTB 機器' },
+        'prog.kpiRank':      { en: 'HTB rank', ja: 'HTB ランク', zh: 'HTB 等級' },
         'prog.learnPathsSub':{ en: 'HTB Academy job-role paths', ja: 'HTB Academy 職務別パス', zh: 'HTB Academy 職務路線' },
         'prog.topicsDone':   { en: 'topics 100%', ja: '完了トピック', zh: '完成主題' },
         'prog.byTopic':      { en: 'labs by topic', ja: 'トピック別ラボ', zh: '依主題分類' },
@@ -431,7 +423,7 @@
         document.querySelectorAll('.learn-track').forEach(function (track) {
             var out = track.querySelector('[data-track-pct]');
             var pcts = [].map.call(track.querySelectorAll('.learn-pct'), function (el) {
-                return parseInt(el.textContent, 10) || 0;
+                return parseFloat(el.textContent) || 0;
             });
             if (!out || !pcts.length) return;
             var avg = Math.round(pcts.reduce(function (a, b) { return a + b; }, 0) / pcts.length);
@@ -950,78 +942,55 @@
             psTotal  = psTopics.reduce(function (s, x) { return s + (x.total  || 0); }, 0);
         }
         var psPct = psTotal ? Math.round(psSolved / psTotal * 100) : (ps.progress || 0);
-        var aRef = d.htb_academy || {}, lRef = d.htb_labs || {};
+        // htb_academy: array of active certs (a lone object is also accepted)
+        var aList = [].concat(d.htb_academy || []), lRef = d.htb_labs || {};
 
         var h = '<p class="prog-updated">' +
             (d.updated ? t('prog.lastUpdated') + ' <span class="accent">' + esc(d.updated) + '</span>' : '') + '</p>';
 
+        var aDone = aList.filter(function (a) { return (a.path_progress || 0) >= 100; }).length;
+
         h += '<div class="prog-kpis">';
         if (d.paths_done != null) h += kpi(d.paths_done, t('prog.pathsDone'));
-        if (aRef.path_progress != null) h += kpi(aRef.path_progress + '%', esc(aRef.cert || '') + ' ' + t('prog.path'));
+        else if (aList.length) h += kpi(aDone, t('prog.pathsDone'));
+        if (lRef.machines_owned != null) h += kpi(lRef.machines_owned +
+            (lRef.machines_total ? '<span class="muted">/' + lRef.machines_total + '</span>' : ''), t('prog.kpiBoxes'));
+        if (lRef.rank) h += kpi(esc(lRef.rank), t('prog.kpiRank'));
         if (psTotal) h += kpi(psSolved + '<span class="muted">/' + psTotal + '</span>', t('prog.kpiLabs'));
-        if (lRef.machines_owned != null) h += kpi(lRef.machines_owned, t('prog.kpiBoxes'));
         h += '</div>';
 
         h += '<div class="prog-grid">';
 
-        var a = d.htb_academy;
-        if (a) {
-            h += '<article class="prog-card reveal">';
-            h += '<div class="prog-head"><h3>HTB Academy</h3>' +
-                (a.cert ? '<span class="prog-badge">' + esc(a.cert) + '</span>' : '') + '</div>';
-            if (a.cert_full) h += '<p class="prog-sub">' + esc(a.cert_full) + ' ' + t('prog.path') + '</p>';
-            var ap = a.path_progress || 0;
-            h += '<div class="prog-row"><span>' + t('prog.pathProgress') + '</span><span class="accent">' + ap + '%</span></div>' + bar(ap);
-            h += '<div class="prog-stats">';
-            if (a.modules_done != null) h += '<div><span class="num">' + a.modules_done +
-                (a.modules_total ? '<span class="muted">/' + a.modules_total + '</span>' : '') + '</span><span class="lbl">' + t('prog.modules') + '</span></div>';
-            if (a.cubes != null) h += '<div><span class="num">' + a.cubes + '</span><span class="lbl">' + t('prog.cubes') + '</span></div>';
-            h += '</div>';
-            if (a.recent_modules && a.recent_modules.length) {
-                h += '<p class="prog-mini">' + t('prog.recentModules') + '</p><ul class="prog-list">';
-                a.recent_modules.forEach(function (m) { h += '<li>' + esc(m) + '</li>'; });
-                h += '</ul>';
-            }
-            h += '</article>';
-        }
-
-        var lp = d.learning_paths;
-        if (lp && lp.length) {
-            var lpDone = lp.filter(function (x) { return (x.progress || 0) >= 100; }).length;
-            h += '<article class="prog-card reveal">';
-            h += '<div class="prog-head"><h3>' + t('prog.learnPaths') + '</h3><span class="prog-badge">' + lpDone + '/' + lp.length + '</span></div>';
+        if (aList.length) {
+            h += '<article class="prog-card wide-card reveal">';
+            h += '<div class="prog-head"><h3>HTB Academy</h3><span class="prog-badge">' + aDone + '/' + aList.length + '</span></div>';
             h += '<p class="prog-sub">' + t('prog.learnPathsSub') + '</p>';
-            h += '<div class="prog-topics">';
-            lp.forEach(function (x) {
-                var pv = x.progress || 0;
-                h += '<div class="topic' + (pv >= 100 ? ' done' : '') + '"><div class="prog-row"><span>' + esc(x.name) +
-                    '</span><span class="' + (pv >= 100 ? 'muted' : 'accent') + '">' + pv + '%</span></div>' + bar(pv) + '</div>';
+            h += '<div class="cert-list">';
+            aList.forEach(function (a) {
+                var ap = a.path_progress || 0;
+                var label = esc(a.cert || '') +
+                    (a.cert_full ? ' <span class="cert-full">— ' + esc(a.cert_full) + '</span>' : '');
+                if (ap >= 100) {
+                    h += '<div class="cert-row done"><div class="prog-row">' +
+                        '<span><span class="tick">✓</span> ' + label + '</span>' +
+                        '<span class="muted">100%</span></div></div>';
+                    return;
+                }
+                h += '<div class="cert-row"><div class="prog-row"><span>' + label + '</span>' +
+                    '<span class="accent">' + ap + '%</span></div>' + bar(ap);
+                var stats = '';
+                if (a.modules_done != null) stats += '<div><span class="num">' + a.modules_done +
+                    (a.modules_total ? '<span class="muted">/' + a.modules_total + '</span>' : '') + '</span><span class="lbl">' + t('prog.modules') + '</span></div>';
+                if (a.cubes != null) stats += '<div><span class="num">' + a.cubes + '</span><span class="lbl">' + t('prog.cubes') + '</span></div>';
+                if (stats) h += '<div class="prog-stats">' + stats + '</div>';
+                if (a.recent_modules && a.recent_modules.length) {
+                    h += '<p class="prog-mini">' + t('prog.recentModules') + '</p><ul class="prog-list">';
+                    a.recent_modules.forEach(function (m) { h += '<li>' + esc(m) + '</li>'; });
+                    h += '</ul>';
+                }
+                h += '</div>';
             });
             h += '</div>';
-            h += '</article>';
-        }
-
-        var l = d.htb_labs;
-        if (l) {
-            h += '<article class="prog-card reveal">';
-            h += '<div class="prog-head"><h3>' + t('prog.htbMachines') + '</h3>' +
-                (l.rank ? '<span class="prog-badge">' + esc(l.rank) + '</span>' : '') + '</div>';
-            h += '<p class="prog-sub">' + t('prog.htbLabsSub') + '</p>';
-            h += '<div class="prog-stats wide">';
-            if (l.machines_owned != null) h += '<div><span class="num">' + l.machines_owned + '</span><span class="lbl">' + t('prog.owned') + '</span></div>';
-            if (l.user_owns != null) h += '<div><span class="num">' + l.user_owns + '</span><span class="lbl">' + t('prog.user') + '</span></div>';
-            if (l.system_owns != null) h += '<div><span class="num">' + l.system_owns + '</span><span class="lbl">' + t('prog.system') + '</span></div>';
-            h += '</div>';
-            if (l.recent && l.recent.length) {
-                h += '<p class="prog-mini">' + t('prog.recentPwned') + '</p><ul class="prog-machines">';
-                l.recent.forEach(function (m) {
-                    h += '<li><span class="m-os m-' + esc(m.os || '') + '" title="' + esc(m.os || '') + '"></span>' +
-                        '<span class="m-name">' + esc(m.name || '') + '</span>' +
-                        '<span class="m-diff diff-' + esc(m.difficulty || '') + '">' + esc(m.difficulty || '') + '</span>' +
-                        (m.date ? '<span class="m-date">' + esc(m.date) + '</span>' : '') + '</li>';
-                });
-                h += '</ul>';
-            }
             h += '</article>';
         }
 

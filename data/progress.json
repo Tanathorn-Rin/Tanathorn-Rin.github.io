@@ -1,20 +1,26 @@
 {
-  "updated": "2026-06-21",
-  "paths_done": 3,
-  "learning_paths": [
-    { "name": "HTB CJCA", "progress": 100 },
-    { "name": "HTB CWES", "progress": 100 },
-    { "name": "HTB CPTS", "progress": 100 },
-    { "name": "HTB COAE", "progress": 0 }
+  "updated": "2026-07-10",
+  "htb_academy": [
+    { "cert": "CJCA", "cert_full": "Certified Junior Cybersecurity Associate", "path_progress": 100 },
+    { "cert": "CWES", "cert_full": "Certified Web Exploitation Specialist", "path_progress": 100 },
+    { "cert": "CPTS", "cert_full": "Certified Penetration Testing Specialist", "path_progress": 100 },
+    {
+      "cert": "CDSA",
+      "cert_full": "Certified Defensive Security Analyst",
+      "path_progress": 70.1,
+      "modules_done": null,
+      "modules_total": null,
+      "recent_modules": []
+    },
+    {
+      "cert": "COAE",
+      "cert_full": "Certified Offensive AI Expert",
+      "path_progress": 54.8,
+      "modules_done": null,
+      "modules_total": null,
+      "recent_modules": []
+    }
   ],
-  "htb_academy": {
-    "cert": "COAE",
-    "cert_full": "Certified Offensive AI Expert",
-    "path_progress": 0,
-    "modules_done": 0,
-    "modules_total": null,
-    "recent_modules": []
-  },
   "portswigger": {
     "by_topic": [
       { "name": "SQL injection", "solved": 13, "total": 18 },
@@ -51,15 +57,8 @@
     ]
   },
   "htb_labs": {
-    "rank": "Hacker",
-    "machines_owned": 7,
-    "user_owns": 7,
-    "system_owns": 7,
-
-    "recent_template": {"name": "", "os": "", "difficulty": "","date": ""},
-
-    "recent": [
-      { "name": "Cap",    "os": "linux",   "difficulty": "easy",   "date": "2025-03-10" }
-    ]
+    "rank": "Master",
+    "machines_owned": 0,
+    "machines_total": 543
   }
 }

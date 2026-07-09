@@ -334,6 +334,8 @@ a { color: inherit; text-decoration: none; }
 .learn-note { display: block; color: var(--muted); font-size: 0.78rem; }
 .learn-pct { color: var(--red); font-weight: 700; }
 .learn-track { margin-bottom: 34px; }
+/* 19px = .learn-track.done's 18px padding + 1px border, so names and pcts column-align */
+.learn-track:not(.done) { padding: 0 19px; }
 .track-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px dashed var(--line); }
 .track-name { color: var(--white); font-weight: 700; font-size: 1.05rem; }
 .track-note { display: block; color: var(--muted); font-size: 0.78rem; margin-top: 2px; }
@@ -484,7 +486,7 @@ a { color: inherit; text-decoration: none; }
     border: 1px solid var(--red); border-radius: 4px; padding: 3px 8px; white-space: nowrap;
 }
 .prog-sub { color: var(--muted); font-size: 0.8rem; margin-bottom: 18px; }
-.prog-row { display: flex; justify-content: space-between; align-items: baseline; font-size: 0.85rem; margin-bottom: 7px; }
+.prog-row { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; font-size: 0.85rem; margin-bottom: 7px; }
 .prog-row span:first-child { color: var(--text); }
 .prog-stats { display: flex; gap: 26px; margin: 20px 0 4px; }
 .prog-stats.wide { gap: 22px; }
@@ -501,18 +503,16 @@ a { color: inherit; text-decoration: none; }
 .topic.done .fill { background: var(--green); box-shadow: none; }
 .topic.done .prog-row .muted { color: var(--green); }
 
-/* recently pwned machines */
-.prog-machines { list-style: none; display: grid; gap: 9px; }
-.prog-machines li { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; }
-.m-os { width: 9px; height: 9px; border-radius: 50%; flex: none; background: var(--muted); }
-.m-os.m-linux { background: var(--amber); box-shadow: 0 0 7px var(--amber); }
-.m-os.m-windows { background: #2da7ff; box-shadow: 0 0 7px #2da7ff; }
-.m-name { color: var(--white); flex: 1; }
-.m-diff { font-size: 0.68rem; padding: 2px 7px; border-radius: 20px; border: 1px solid var(--line); color: var(--muted); text-transform: lowercase; }
-.m-diff.diff-easy { color: var(--green); border-color: var(--green); }
-.m-diff.diff-medium { color: var(--amber); border-color: var(--amber); }
-.m-diff.diff-hard, .m-diff.diff-insane { color: var(--red); border-color: var(--red); }
-.m-date { color: var(--muted); font-size: 0.72rem; white-space: nowrap; }
+/* unified HTB Academy cert list */
+.cert-list { margin-top: 18px; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px 28px; }
+.cert-row { display: flex; flex-direction: column; }
+/* pin bars to the row bottom so they align across columns even when a name wraps */
+.cert-row .bar { margin-top: auto; }
+.cert-list .prog-row { margin-bottom: 5px; }
+.cert-row.done .prog-row { margin-bottom: 0; }
+.cert-row .cert-full { color: var(--muted); font-size: 0.78rem; }
+.cert-row .tick { color: var(--green); }
+.cert-row.done .prog-row .muted { color: var(--green); }
 
 /* ---------- contact ---------- */
 .contact-wrap { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; align-items: start; }
