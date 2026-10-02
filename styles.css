@@ -500,8 +500,8 @@ a { color: inherit; text-decoration: none; }
 .prog-card.wide-card { grid-column: 1 / -1; }
 .prog-topics { margin-top: 18px; display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 10px 24px; }
 .prog-topics .topic { display: flex; flex-direction: column; }
-.prog-topics .topic .prog-row { margin-bottom: 5px; }
-/* ponytail: grid rows stretch, so margin-top:auto bottom-aligns bars across wrapped labels */
+/* ponytail: reserve 2 lines for every label so all bars sit on one line; auto margin catches a rare 3rd */
+.prog-topics .topic .prog-row { margin-bottom: 5px; line-height: 1.35; min-height: 2.7em; }
 .prog-topics .topic .bar { margin-top: auto; }
 .topic.done .fill { background: var(--green); box-shadow: none; }
 .topic.done .prog-row .muted { color: var(--green); }
